@@ -1,15 +1,10 @@
-const stopBounce = () =>{
-    setTimeout(()=>{
-        $('#nav').removeClass('animate-bounce')
-    },2370)
-}
 
-const d = new Date();
+
 
 const app = Vue.createApp({
     data(){
         return({
-            d
+            
         })
     }
 });
@@ -17,6 +12,6 @@ const app = Vue.createApp({
 app.mount('#app')
 
 $(document).ready(function(){
-    stopBounce();
+
     
 })
