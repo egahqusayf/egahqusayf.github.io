@@ -4,11 +4,31 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="src/style.css">
+	<script src="./node_modules/jquery/dist/jquery.js"></script>
 	<title>Surabaya Dev</title>
 </head>
-<body>
-	
-	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-	<script src="main.js"></script>
+<body class=" bg-green-400">
+
+	<div id="app">
+
+		
+		<header class="flex nav w-full h-32 bg-gradient-to-tr from-slate-200 to-slate-50  justify-around items-center cursor-pointer">
+			<div class="logo animate-bounce" id="nav">
+				<a href="#"><img src="src/img/logo-surabayadev.png" class=" w-96 h-44 " alt=""></a>
+			</div>
+			<nav class=" h-28  w-3/5  bg-green-400 flex items-center justify-start" >
+				<h1 class=" font-bold ">OPEN RECRUITMENT UNTIL</h1>
+				<h2>{{d}}</h2>
+			</nav>
+			
+			
+		</header>
+		
+	</div>
+		
+		
+		
+	<script  src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="src/main.js"></script>
 </body>
 </html>
