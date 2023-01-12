@@ -1,16 +1,16 @@
 
-const ctleft = [
-    `<div class="w-full flex justify-center items-center h-16 bg-gradient-to-l from-slate-600 via-green-700 to-slate-500 rounded-2xl mb-2">
-        <p class="font-teko text-2xl text-slate-200 tracking-widest ">Awal mula Surabaya Dev</p>
-    </div>`
-   
-];
-
+const ctleft = ['Awal mula Surabaya Dev','Visi dan Misi','Kegiatan','Kenapa harus gabung','Persyaratan','Posisi yang dibuka']
+let angka = 3
 const app = Vue.createApp({
     data(){
         return({
-            ctleft
+            ctleft,angka
         })
+    },
+    methods:{
+            pushCtl(index){
+                
+            }
     }
 });
 
