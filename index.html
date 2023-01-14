@@ -23,34 +23,15 @@
 	</div>
 	<div class=" w-full h-4  bg-slate-50 opacity-90"></div>
 
-	<div id="app" class="content w-full pt-4 h-[640px] bg-gradient-to-br from-green-500 via-green-200 to-green-400 flex justify-center gap-3">
-		<div class="ctcleft  w-1/5 h-[600px] border-black rounded-xl  ">
+	<div id="app" class="content w-full pt-4  bg-gradient-to-br from-green-500 via-green-200 to-green-400 flex justify-center gap-3">
+		<p>{{tes}}</p>
+		<div class="ctcleft  w-1/5  border-black rounded-xl  ">
 			<div  v-for="ctl,index in ctleft"  :class="{'ctl w-full cursor-pointer flex justify-center items-center h-16 bg-gradient-to-l from-slate-600 via-green-700 to-slate-500 rounded-2xl mb-2':true}">
 				<p  class="font-teko  text-2xl text-slate-200 tracking-widest" v-text="ctl"></p>
 			</div>
 		</div>
-		<div id="ctr"  class="ctright w-3/5  bg-gradient-to-b from-slate-500 via-slate-400 to-green-200 border-2 p-3 rounded-xl  ">
-			<div class="visimisi w-full flex flex-col  justify-start items-center gap-8 ">
-				<h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">Visi & Misi</h1>
-				<p class=" font-teko text-xl text-slate-100 mx-5">Surabaya Dev bertujuan menjadi wadah talenta teknologi dengan memanfaatkan potensinya untuk meningkatkan skill tech di bidang programming maupun digital teknologi agar dapat saling bersinergi berkolaborasi</p>
-				<div class="misi flex px-6 ">
-					<div class="misi1 justify-center">
-						<h1 class=" font-teko text-2xl">Wadah belajar</h1>
-						<p>Menjadi wadah belajar pegiat IT untuk bisa terus update mengenai tech industri saat ini</p>
-					</div>
-					<div class="misi1 justify-center">
-						<h1>Wadah belajar</h1>
-						<p>Menjadi wadah belajar pegiat IT untuk bisa terus update mengenai tech industri saat ini</p>
-					</div>
-					<div class="misi1 justify-center">
-						<h1>Wadah belajar</h1>
-						<p>Menjadi wadah belajar pegiat IT untuk bisa terus update mengenai tech industri saat ini</p>
-					</div>
-					
-					<div class="misi2"></div>
-					<div class="misi3"></div>
-				</div>
-			</div>
+		<div id="ctr"  class="ctright w-3/5  bg-gradient-to-b from-slate-500 via-slate-400 to-green-200  p-3 rounded-xl  ">
+
 		</div>
 	</div>
 		
