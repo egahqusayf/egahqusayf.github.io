@@ -1,5 +1,5 @@
 const ctleft = ['Awal mula Surabaya Dev','Visi dan Misi','Kegiatan','Kenapa harus gabung','Persyaratan','Posisi yang dibuka']
-const ctrightComp = ['<amsb/>','<visimisi/>','<kegiatan/>','<kenapa/>','<persyaratan/>','<posisi/>'];
+const ctrightComp = ['amsb','visimisi','kegiatan','kenapa','persyaratan','posisi'];
 const posisiCont = [
     'Social Media & Content Creative',
     'Graphic Designer',
@@ -8,23 +8,23 @@ const posisiCont = [
     'Management Event Community',
     'Admin & Logistic'
 ]
-const a = 'visiMisi'
-content = `<div><amsb/></div>`
+content = `<${ctrightComp[0]}/>`
 let indexComp = 0;
 const app = Vue.createApp({
     data(){
         return{
-            ctleft,ctrightComp,posisiCont,indexComp,content,a
+            ctleft,ctrightComp,posisiCont,indexComp,content
         }
     },
     methods: {
         fillCtr(index){
-          this.indexComp = index
-          this.content = `<div>${this.ctrightComp[this.indexComp]}</div>`
+          this.indexComp = index;
+          this.content = `<${this.ctrightComp[this.indexComp]}/>`;
+          console.log(this.content)
         }
     }
 });
-const amsb   = app.component('amsb',{
+const amsb           = app.component('amsb',{
     template: `<div class=" w-full flex flex-col  justify-start items-center gap-8">
     <h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">&#10024 Awal Mula Surabaya Dev &#10024</span></h1>
     <div class="timeline flex gap-3 flex-col w-[90%] justify-end">
@@ -54,7 +54,7 @@ const amsb   = app.component('amsb',{
     </div>
 </div>`
 })
-const visiMisi = app.component('visimisi',{
+const visiMisi      = app.component('visimisi',{
     template: `
     <div class="visimisi w-full flex flex-col  justify-start items-center gap-8 ">
     <h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">Visi & Misi</h1>
@@ -77,7 +77,7 @@ const visiMisi = app.component('visimisi',{
     `
 
 })
-const Kegiatan = app.component('kegiatan',{
+const Kegiatan      = app.component('kegiatan',{
     template:`
     <div class="kegiatan w-full flex flex-col  justify-start items-center gap-8 ">
 				<h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">Kegiatan</h1>
@@ -98,7 +98,7 @@ const Kegiatan = app.component('kegiatan',{
 			</div>
     `
 })
-const kenapa = app.component('kenapa',{
+const kenapa        = app.component('kenapa',{
     template: `
             <div class="visimisi w-full flex flex-col  justify-start items-center gap-8 ">
 				<h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">Kenapa harus gabung?</h1>
@@ -119,8 +119,8 @@ const kenapa = app.component('kenapa',{
 				</div>
 			</div>
     `
-})
-const persyaratan = app.component('persyaratan',{
+})  
+const persyaratan   = app.component('persyaratan',{
     template:`
             <div class="persyaratan w-full flex flex-col  justify-start items-center gap-8">
 				<h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">Persyaratan</h1>
@@ -143,7 +143,7 @@ const persyaratan = app.component('persyaratan',{
 			</div>
     `
 })
-const posisi = app.component('posisi',{
+const posisi        = app.component('posisi',{
     data(){
         return{
             posisiCont
@@ -157,8 +157,5 @@ const posisi = app.component('posisi',{
 			</div>
     `
 })
-
-
-
 
 app.mount('#app')
