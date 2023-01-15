@@ -1,33 +1,31 @@
 const ctleft = ['Awal mula Surabaya Dev','Visi dan Misi','Kegiatan','Kenapa harus gabung','Persyaratan','Posisi yang dibuka']
-const ctrightComp = ['<amsb/>','<visimisi/>','<kegiatan/>','<kenapa/>','<persyaratan/>'];
+const ctrightComp = ['<amsb/>','<visimisi/>','<kegiatan/>','<kenapa/>','<persyaratan/>','<posisi/>'];
+const posisiCont = [
+    'Social Media & Content Creative',
+    'Graphic Designer',
+    'Podcaster/ Host/ Streamer',
+    'Dev Team',
+    'Management Event Community',
+    'Admin & Logistic'
+]
+const a = 'visiMisi'
+content = `<div><amsb/></div>`
+let indexComp = 0;
 const app = Vue.createApp({
     data(){
         return{
-            ctleft,ctrightComp
-        }
-    },
-    methods:{
-            
-    }
-});
-app.mount('#app');
-
-const angka = 3;
-
-const ctright = Vue.createApp({
-    data(){
-        return{
-            ctrightComp
+            ctleft,ctrightComp,posisiCont,indexComp,content,a
         }
     },
     methods: {
         fillCtr(index){
-            `<${ctrightComp[index]}></${ctrightComp[index]}>`
+          this.indexComp = index
+          this.content = `<div>${this.ctrightComp[this.indexComp]}</div>`
         }
     }
 });
-const amsb    = ctright.component('amsb',{
-    template: `	<div class=" w-full flex flex-col  justify-start items-center gap-8">
+const amsb   = app.component('amsb',{
+    template: `<div class=" w-full flex flex-col  justify-start items-center gap-8">
     <h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">&#10024 Awal Mula Surabaya Dev &#10024</span></h1>
     <div class="timeline flex gap-3 flex-col w-[90%] justify-end">
         <div class=" h-16 w-[500px]  rounded-lg self-center">
@@ -56,7 +54,7 @@ const amsb    = ctright.component('amsb',{
     </div>
 </div>`
 })
-const visiMisi = ctright.component('visimisi',{
+const visiMisi = app.component('visimisi',{
     template: `
     <div class="visimisi w-full flex flex-col  justify-start items-center gap-8 ">
     <h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">Visi & Misi</h1>
@@ -79,7 +77,7 @@ const visiMisi = ctright.component('visimisi',{
     `
 
 })
-const Kegiatan = ctright.component('kegiatan',{
+const Kegiatan = app.component('kegiatan',{
     template:`
     <div class="kegiatan w-full flex flex-col  justify-start items-center gap-8 ">
 				<h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">Kegiatan</h1>
@@ -100,7 +98,7 @@ const Kegiatan = ctright.component('kegiatan',{
 			</div>
     `
 })
-const kenapa = ctright.component('kenapa',{
+const kenapa = app.component('kenapa',{
     template: `
             <div class="visimisi w-full flex flex-col  justify-start items-center gap-8 ">
 				<h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">Kenapa harus gabung?</h1>
@@ -122,7 +120,7 @@ const kenapa = ctright.component('kenapa',{
 			</div>
     `
 })
-const persyaratan = ctright.component('persyaratan',{
+const persyaratan = app.component('persyaratan',{
     template:`
             <div class="persyaratan w-full flex flex-col  justify-start items-center gap-8">
 				<h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">Persyaratan</h1>
@@ -145,6 +143,22 @@ const persyaratan = ctright.component('persyaratan',{
 			</div>
     `
 })
+const posisi = app.component('posisi',{
+    data(){
+        return{
+            posisiCont
+        }
+    },
+    template:`
+            <div class="posisi flex gap-[2px]">
+				<div v-for="pos in posisiCont" class="posisi1 ct rounded-2xl h-[400px] w-full bg-gradient-to-bl from-green-100 to-green-300 flex justify-center ">
+					<p  class=" text-center -rotate-90  self-center font-teko tracking-widest text-3xl text-green-900">{{pos}}</p>
+				</div>	
+			</div>
+    `
+})
 
 
-ctright.mount('#ctr')
+
+
+app.mount('#app')
