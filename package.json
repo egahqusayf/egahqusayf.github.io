@@ -2,9 +2,7 @@
   "devDependencies": {
     "tailwindcss": "^3.2.4"
   },
-  "scripts": {
-    
-  },
+  "scripts": {},
   "dependencies": {
     "jquery": "^3.6.3",
     "juery": "^1.0.0"

@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="src/style.css">
-	<script src="./node_modules/jquery/dist/jquery.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Comfortaa:wght@300;700&family=Exo+2&family=Kanit:ital,wght@0,600;1,700&family=Kdam+Thmor+Pro&family=Montserrat:ital,wght@1,300;1,500&family=PT+Sans+Narrow:wght@700&family=Rubik:wght@300&family=Teko:wght@300;400&family=Titillium+Web:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
 	<title>Surabaya Dev</title>
 </head>
@@ -25,22 +24,64 @@
 
 	<div id="app" class="content w-full pt-4  bg-gradient-to-br from-green-500 via-green-200 to-green-400 flex justify-center gap-3">
 		<div  class="ctcleft  w-1/5  border-black rounded-xl  ">
-			<div  v-on:click="fillCtr(index)" v-for="ctl,index in ctleft"  :class="{'ctl w-full cursor-pointer flex justify-center items-center h-16 bg-gradient-to-l from-slate-600 via-green-700 to-slate-500 rounded-2xl mb-2':true}">
+			<div  v-on:click="fillCtr(index)" v-for="ctl,index in ctleft"  :class="{'ctl w-[80%] hover:w-full cursor-pointer flex justify-center items-center h-16 bg-gradient-to-l from-slate-600 via-green-700 to-slate-500 rounded-2xl mb-2':true}">
+				
 				<p  class="font-teko  text-2xl text-slate-200 tracking-widest" v-text="ctl"></p>
 			</div>
 		</div>
 		<div  class="ctright w-3/5  bg-gradient-to-b from-slate-400 via-slate-400 to-green-200  p-3 rounded-xl" >
-			<div class="posisi flex gap-[2px] ">
-				<div v-for="pos in posisiCont" class=" posisi1 ct rounded-2xl h-[400px] w-full bg-gradient-to-bl from-green-100 to-green-300 flex justify-center ">
+			<div class="posisi flex gap-[2px]">
+				<div v-for="pos in posisiCont" class="cursor-pointer posisi1 ct rounded-2xl h-[400px] w-full bg-gradient-to-bl from-green-100 to-green-300 flex justify-center ">
 					<p  class=" text-center -rotate-90  self-center font-teko tracking-widest text-3xl text-green-900">{{pos}}</p>
 				</div>	
 			</div>
 		</div>
 	</div>
+
+	<footer id="footer" class=" mt-6 w-full h-[200px] bg-gradient-to-l from-green-800 via-green-200 to-green-900 pt-2">
+		<div class="jarak  w-full h-1 bg-slate-200"></div>
+		<div class="ctf w-4/5 h-[160px] flex flex-col justify-center items-center bg-slate-100 mt-2 mx-auto rounded-2xl border-solid border-4 border-green-400">
+			<h1 class=" font-teko text-3xl tracking-widest text-slate-800">Dibuka hingga</h1>
+			<p id="deadline" class="font-teko text-4xl tracking-widest text-slate-800"></p>
+		</div>
+	</footer>
 		
 		
 		
 	<script  src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="./node_modules/jquery/dist/jquery.js"></script>
 	<script src="src/main.js"></script>
+
+	<script>
+		// Mengatur waktu akhir perhitungan mundur
+		let countDownDate = new Date("Jan 20, 2023 23:59:99").getTime();
+
+		// Memperbarui hitungan mundur setiap 1 detik
+		let x = setInterval(function() {
+
+		// Untuk mendapatkan tanggal dan waktu hari ini
+		let now = new Date().getTime();
+			
+		// Temukan jarak antara sekarang dan tanggal hitung mundur
+		let distance = countDownDate - now;
+			
+		// Perhitungan waktu untuk hari, jam, menit dan detik
+		let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			
+		// Keluarkan hasil dalam elemen dengan id = "demo"
+		document.getElementById("deadline").innerHTML = days + "d " + hours + "h "
+		+ minutes + "m " + seconds + "s ";
+			
+		// Jika hitungan mundur selesai, tulis beberapa teks 
+		if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("deadline").innerHTML = "Pendaftaran telah ditutup";
+		}
+		}, 1000);
+	</script>
+	
 </body>
 </html>

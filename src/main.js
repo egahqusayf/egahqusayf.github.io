@@ -10,6 +10,9 @@ const posisiCont = [
 ]
 content = `<${ctrightComp[0]}/>`
 let indexComp = 0;
+
+
+
 const app = Vue.createApp({
     data(){
         return{
@@ -158,4 +161,19 @@ const posisi        = app.component('posisi',{
     `
 })
 
+
 app.mount('#app')
+
+let deadline = new Date("Dec 5, 2019 15:37:25").getTime()
+let now = new Date().getTime()
+const footer = Vue.createApp({
+    data(){
+        return{
+            deadline,now
+        }
+    },
+
+
+    
+})
+footer.mount('#footer')
