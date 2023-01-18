@@ -8,32 +8,73 @@ const posisiCont = [
     'Management Event Community',
     'Admin & Logistic'
 ]
-content = `<${ctrightComp[0]}/>`
-let indexComp = 0;
-
-
+let ctl6 =false;
+let srcPos = './src/img/posisi'
 
 const app = Vue.createApp({
     data(){
         return{
-            ctleft,ctrightComp,posisiCont,indexComp,content
+            ctleft,ctrightComp,posisiCont,srcPos,ctl6
         }
     },
     methods: {
         fillCtr(index){
-          this.indexComp = index;
-          this.content = `<${this.ctrightComp[this.indexComp]}/>`;
-          console.log(this.content)
+          console.log(index)
+          const ctright = document.getElementsByClassName('ctright')[0];
+          const ctl = document.getElementsByClassName('ctl');
+
+            for(let i=0; i<6;i++){
+                if(i == index){
+                    ctl[i].classList.remove('w-[80%]')
+                    ctl[i].classList.add('w-full')
+                    ctright.children[i].classList.remove('hidden')
+                }else {
+                    ctl[i].classList.add('w-[80%]')
+                    ctl[i].classList.remove('w-full')
+                    ctright.children[i].classList.add('hidden')
+                }
+            }
+        
+          
+        },
+        fillPosisi(index){
+            
+            const target = document.getElementsByClassName('ctposisi');
+            const srcPosCt = document.getElementsByClassName('srcPos')
+            const textPos = document.getElementsByClassName('textPos')
+            for(let i=0;i<6;i++){
+                if(i==index){
+                    target[i].classList.remove('w-[50px]')
+                    target[i].classList.remove('bg-gradient-to-bl')
+                    target[i].classList.remove('from-green-100')
+                    target[i].classList.remove('to-green-300')
+                    textPos[i].classList.remove('hidden')
+                
+                    target[i].classList.add('w-full')
+                    srcPosCt[i].classList.remove('hidden')
+                }else{
+                    target[i].classList.add('w-[50px]')
+                    target[i].classList.add('bg-gradient-to-bl')
+                    target[i].classList.add('from-green-100')
+                    target[i].classList.add('to-green-300')
+
+                    textPos[i].classList.add('hidden')
+                    srcPosCt[i].classList.add('hidden')
+
+                }
+            }
+            
         }
     }
 });
 const amsb           = app.component('amsb',{
     template: `<div class=" w-full flex flex-col  justify-start items-center gap-8">
     <h1 class=" font-semibold font-teko tracking-wider text-5xl text-green-300">&#10024 Awal Mula Surabaya Dev &#10024</span></h1>
-    <div class="timeline flex gap-3 flex-col w-[90%] justify-end">
-        <div class=" h-16 w-[500px]  rounded-lg self-center">
-            <p class="font-semibold text-slate-800 text-xl text-center font-teko tracking-wider">Lahir sebagai wadah untuk para programmer yang ingin berkembang mengembangkan kemampuan, teknik, dan skill</p>
-        </div>
+    <div class=" h-16 w-[500px]  rounded-lg self-center">
+        <p class="font-semibold text-slate-800 text-xl text-center font-teko tracking-wider">Lahir sebagai wadah untuk para programmer yang ingin berkembang mengembangkan kemampuan, teknik, dan skill</p>
+    </div>
+    <div class="timeline flex gap-3 flex w-[90%] justify-end">
+        
         <div class=" h-16 w-[500px]  rounded-lg">
             <h1 class=" text-green-300 font-semibold text-2xl text-center font-teko tracking-widest">2014</h1>
             <p class="font-semibold text-3xl text-slate-800 text-center font-teko tracking-wider">MUNCUL</p>
@@ -153,27 +194,15 @@ const posisi        = app.component('posisi',{
         }
     },
     template:`
-            <div class="posisi flex gap-[2px]">
-				<div v-for="pos in posisiCont" class="posisi1 ct rounded-2xl h-[400px] w-full bg-gradient-to-bl from-green-100 to-green-300 flex justify-center ">
-					<p  class=" text-center -rotate-90  self-center font-teko tracking-widest text-3xl text-green-900">{{pos}}</p>
-				</div>	
-			</div>
+    <div class="posisi flex gap-[2px]">
+        <div v-on:mouseover="fillPosisi(index)" v-for="pos,index in posisiCont" class="cursor-pointer duration-500 ctposisi ct rounded-2xl h-[400px]  w-full bg-gradient-to-bl from-green-100 to-green-300 flex justify-center ">
+            <p  class=" textPos text-center -rotate-90  self-center font-teko tracking-widest text-2xl text-green-900 ">{{pos}}</p>
+            <img :src="srcPos+(index+1)+'.jpg'" class="srcPos hidden" alt="">
+        </div>	
+    </div>
     `
 })
 
 
 app.mount('#app')
 
-let deadline = new Date("Dec 5, 2019 15:37:25").getTime()
-let now = new Date().getTime()
-const footer = Vue.createApp({
-    data(){
-        return{
-            deadline,now
-        }
-    },
-
-
-    
-})
-footer.mount('#footer')

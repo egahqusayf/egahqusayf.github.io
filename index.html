@@ -24,23 +24,35 @@
 
 	<div id="app" class="content w-full pt-4  bg-gradient-to-br from-green-500 via-green-200 to-green-400 flex justify-center gap-3">
 		<div  class="ctcleft  w-1/5  border-black rounded-xl  ">
-			<div  v-on:click="fillCtr(index)" v-for="ctl,index in ctleft"  :class="{'ctl w-[80%] hover:w-full cursor-pointer flex justify-center items-center h-16 bg-gradient-to-l from-slate-600 via-green-700 to-slate-500 rounded-2xl mb-2':true}">
+			<div  v-on:click="fillCtr(index)" v-for="ctl,index in ctleft"  :class="{'ctl w-[80%]  cursor-pointer flex justify-center items-center h-16 bg-gradient-to-l from-slate-600 via-green-700 to-slate-500 rounded-2xl mb-2':true}">
 				
 				<p  class="font-teko  text-2xl text-slate-200 tracking-widest" v-text="ctl"></p>
 			</div>
 		</div>
 		<div  class="ctright w-3/5  bg-gradient-to-b from-slate-400 via-slate-400 to-green-200  p-3 rounded-xl" >
-			<div class="posisi flex gap-[2px]">
-				<div v-for="pos in posisiCont" class="cursor-pointer posisi1 ct rounded-2xl h-[400px] w-full bg-gradient-to-bl from-green-100 to-green-300 flex justify-center ">
-					<p  class=" text-center -rotate-90  self-center font-teko tracking-widest text-3xl text-green-900">{{pos}}</p>
+			
+			
+			
+			<amsb class="hidden"></amsb>
+			<visimisi class="hidden"></visimisi>
+			<kegiatan class="hidden"></kegiatan>
+			<kenapa class="hidden"></kenapa>
+			<persyaratan class="hidden"></persyaratan>		
+			<div class="posisi flex gap-[2px] ">
+				<div v-on:mouseover="fillPosisi(index)" v-for="pos,index in posisiCont" class="cursor-pointer duration-500 ctposisi ct rounded-2xl h-[400px]  w-full bg-gradient-to-bl from-green-100 to-green-300 flex justify-center ">
+					<p  class=" textPos text-center -rotate-90  self-center font-teko tracking-widest text-2xl text-green-900 ">{{pos}}</p>
+					<img :src="srcPos+(index+1)+'.jpg'" class="srcPos hidden" alt="">
 				</div>	
 			</div>
 		</div>
 	</div>
 
-	<footer id="footer" class=" mt-6 w-full h-[200px] bg-gradient-to-l from-green-800 via-green-200 to-green-900 pt-2">
+	<footer id="footer" class=" mt-6 w-full h-[200px] bg-gradient-to-l from-green-800 via-green-200 to-green-900 ">
 		<div class="jarak  w-full h-1 bg-slate-200"></div>
-		<div class="ctf w-4/5 h-[160px] flex flex-col justify-center items-center bg-slate-100 mt-2 mx-auto rounded-2xl border-solid border-4 border-green-400">
+		<div class="ctf w-4/5 h-[160px] flex flex-col justify-between items-center bg-gradient-to-br from-slate-400 to-slate-200 mt-2 mx-auto rounded-2xl pt-1">
+			<div class="link w-3/5 text-center h-16  bg-gradient-to-l flex items-center justify-center from-green-700 to-green-400 rounded-3xl cursor-pointer">
+				<a target="_blank" href="https://bit.ly/DAFTARSBYDEV2023"><p class=" text-target font-mono text-2xl font-bold text-slate-50 animate-ping">Click here to join us !!!</p></a>
+			</div>
 			<h1 class=" font-teko text-3xl tracking-widest text-slate-800">Dibuka hingga</h1>
 			<p id="deadline" class="font-teko text-4xl tracking-widest text-slate-800"></p>
 		</div>
@@ -51,7 +63,7 @@
 	<script  src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script src="./node_modules/jquery/dist/jquery.js"></script>
 	<script src="src/main.js"></script>
-
+	<!-- DEADLINE -->
 	<script>
 		// Mengatur waktu akhir perhitungan mundur
 		let countDownDate = new Date("Jan 20, 2023 23:59:99").getTime();
