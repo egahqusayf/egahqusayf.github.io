@@ -109,9 +109,45 @@ function slide(direction) {
     // Init
     setContent();
 
-    // Controls
-    nextBtn.addEventListener("click", () => slide("next"));
-    prevBtn.addEventListener("click", () => slide("prev"));
+    /* ======================
+    AUTO SLIDE (4s)
+    ====================== */
+    let autoSlideTimer = null;
+
+    function startAutoSlide() {
+    stopAutoSlide(); // prevent duplicate timer
+    autoSlideTimer = setInterval(() => {
+        slide("next");
+    }, 4000);
+    }
+
+    function stopAutoSlide() {
+    if (autoSlideTimer) {
+        clearInterval(autoSlideTimer);
+        autoSlideTimer = null;
+    }
+    }
+
+    /* ======================
+    CONTROLS (MANUAL)
+    ====================== */
+    nextBtn.addEventListener("click", () => {
+    stopAutoSlide();
+    slide("next");
+    startAutoSlide();
+    });
+
+    prevBtn.addEventListener("click", () => {
+    stopAutoSlide();
+    slide("prev");
+    startAutoSlide();
+    });
+
+    /* ======================
+    INIT
+    ====================== */
+    startAutoSlide();
+
 
 
 
