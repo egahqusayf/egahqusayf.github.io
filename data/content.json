@@ -1,0 +1,83 @@
+{
+  "site": {
+    "title": "Portfolio — Egah Qusay Fatanasyah",
+    "footer": "© 2026 Egah Qusay Fatanasyah"
+  },
+
+  "hero": {
+    "title": "Hi, I’m Egah",
+    "subtitle": "Robotics & Artificial Intelligence Student (8th Semester)\nAutonomous Systems • Computer Vision • Technical Leadership",
+    "tagline": "Building intelligent systems with real-world impact."
+  },
+
+  "about": {
+    "text": "I am a Robotics and Artificial Intelligence student at Universitas Airlangga with strong interests in autonomous robots, computer vision, and artificial intelligence. My journey combines technical development, leadership experience, and real-world applications."
+  },
+
+  "navigation": [
+    { "label": "About", "href": "#about" },
+    { "label": "Journey", "href": "#journey" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Contact", "href": "#contact" }
+
+  ],
+
+  "journey": [
+    {
+      "year": "2022 — Foundation",
+      "items": [
+        "Started Robotics & AI at Universitas Airlangga"
+      ]
+    },
+    {
+      "year": "2023 — Exploration",
+      "items": [
+        "Junior Programming Support — ABU Robocon",
+        "Treasurer — Robotics Community",
+        "Silver Medalist — PIMNAS 36"
+      ]
+    },
+    {
+      "year": "2024 — Leadership",
+      "items": [
+        "Team Leader — ABU Robocon",
+        "Head — Robotics Community",
+        "Bangkit Academy — Machine Learning Path"
+      ]
+    },
+    {
+      "year": "2025 — Impact",
+      "items": [
+        "Minister of Professional Development — Student Executive Board",
+        "Community Empowerment Program — Ministry of Higher Education"
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "AGV Vision Navigation",
+      "description": "Autonomous navigation using APF & RRT",
+      "link": "projects/agv-navigation.html"
+    },
+    {
+      "title": "Face Attendance System",
+      "description": "Vision-based identity verification",
+      "link": "projects/face-attendance.html"
+    },
+    {
+      "title": "Mobile Robot Controller",
+      "description": "Embedded system for mobile robots",
+      "link": "projects/mobile-robot.html"
+    }
+  ],
+
+  "contact": {
+    "text": "Interested in collaboration, research discussion, or professional opportunities?",
+    "links": [
+      { "label": "Email", "url": "mailto:your-email@gmail.com" },
+      { "label": "GitHub", "url": "https://github.com/username" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/username" }
+    ]
+  }
+}
