@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Egah Qusay | Portfolio</title>
+  <title>Egah Qusay Fatanasyah | Robotics & AI Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Custom Config -->
   <script>
+    const params = new URLSearchParams(window.location.search);
+    const isResearch = params.get("mode") === "research";
+
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#6366f1'
+            background: '#ECF4E8',
+            surface: '#CBF3BB',
+            accent: '#ABE7B2',
+            primary: '#93BFC7'
           }
         }
       }
@@ -22,130 +26,158 @@
   </script>
 </head>
 
-<body class="bg-gray-900 text-white font-sans scroll-smooth">
+<body class="bg-background text-gray-800 font-sans scroll-smooth">
 
-  <!-- NAVBAR -->
-  <nav class="fixed w-full bg-gray-900/80 backdrop-blur border-b border-gray-800 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="font-bold text-lg">Egah</h1>
-      <ul class="flex gap-6 text-sm text-gray-300">
-        <li><a href="#about" class="hover:text-primary">About</a></li>
-        <li><a href="#skills" class="hover:text-primary">Skills</a></li>
-        <li><a href="#projects" class="hover:text-primary">Projects</a></li>
-        <li><a href="#contact" class="hover:text-primary">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="min-h-screen flex items-center justify-center px-6 pt-20">
-    <div class="text-center max-w-2xl">
-      <h1 class="text-4xl md:text-6xl font-bold">
-        Hi, Saya <span class="text-primary">Egah</span>
-      </h1>
-      <p class="mt-4 text-gray-400">
-        Mahasiswa Teknik Robotika & AI <br>
-        Computer Vision & Autonomous System Enthusiast
-      </p>
-
-      <div class="mt-8 flex justify-center gap-4">
-        <a href="#projects"
-          class="px-6 py-2 bg-primary rounded hover:bg-indigo-700 transition">
-          Projects
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-background/90 backdrop-blur border-b border-primary z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl md:text-2xl font-extrabold">
+      Portfolio — Egah Qusay Fatanasyah
+    </h1>
+    <ul class="flex gap-8 text-lg font-semibold">
+      <li><a href="#about" class="hover:text-primary">About</a></li>
+      <li><a href="#journey" class="hover:text-primary">Journey</a></li>
+      <li><a href="#projects" class="hover:text-primary">Projects</a></li>
+      <li>
+        <a href="?mode=research" class="underline text-primary">
+          Research Mode
         </a>
-        <a href="#contact"
-          class="px-6 py-2 border border-primary rounded hover:bg-primary transition">
-          Contact
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center pt-32 px-6">
+  <div class="text-center max-w-3xl">
+    <h1 class="text-5xl font-extrabold">
+      Hi, I’m <span class="text-primary">Egah</span>
+    </h1>
+
+    <p class="mt-6 text-lg text-gray-700">
+      Robotics & Artificial Intelligence Student (8th Semester)<br>
+      Autonomous Systems • Computer Vision
+    </p>
+
+    <p class="mt-4 text-sm italic text-gray-600">
+      <script>
+        document.write(
+          isResearch
+            ? "Research-oriented view enabled"
+            : "Professional portfolio view"
+        );
+      </script>
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 bg-surface">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-6">About</h2>
+    <p class="text-lg leading-relaxed">
+      <script>
+        document.write(
+          isResearch
+            ? "This portfolio presents my academic and technical journey in robotics and artificial intelligence, focusing on autonomous systems, vision-based navigation, and applied research methodologies."
+            : "I am a Robotics and Artificial Intelligence student at Universitas Airlangga with strong interests in autonomous robots, computer vision, and leadership in technical teams."
+        );
+      </script>
+    </p>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-14">Journey</h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <div class="bg-surface p-8 rounded-xl border-l-4 border-primary">
+        <h3 class="text-xl font-bold text-primary">2022 — Foundation</h3>
+        <p class="mt-2">
+          Began undergraduate studies in Robotics & AI at Universitas Airlangga.
+        </p>
+      </div>
+
+      <div class="bg-surface p-8 rounded-xl border-l-4 border-primary">
+        <h3 class="text-xl font-bold text-primary">2023 — Exploration</h3>
+        <ul class="list-disc list-inside mt-2">
+          <li>Junior Programming Support — ABU Robocon</li>
+          <li>Treasurer — Robotics Community</li>
+          <li>🥈 Silver Medalist — PIMNAS 36</li>
+        </ul>
+      </div>
+
+      <div class="bg-surface p-8 rounded-xl border-l-4 border-primary">
+        <h3 class="text-xl font-bold text-primary">2024 — Leadership</h3>
+        <ul class="list-disc list-inside mt-2">
+          <li>Team Leader — ABU Robocon</li>
+          <li>Head — Robotics Community</li>
+          <li>Bangkit Academy — ML Path</li>
+        </ul>
+      </div>
+
+      <div class="bg-surface p-8 rounded-xl border-l-4 border-primary">
+        <h3 class="text-xl font-bold text-primary">2025 — Impact</h3>
+        <ul class="list-disc list-inside mt-2">
+          <li>Minister of Professional Development — BEM</li>
+          <li>Community Empowerment Program</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 bg-surface">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12">Selected Projects</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-background p-8 rounded-xl">
+        <h3 class="font-bold text-lg">AGV Vision Navigation</h3>
+        <p class="mt-2 text-gray-700">
+          Autonomous navigation using APF & RRT
+        </p>
+        <a href="projects/agv-navigation.html"
+           class="inline-block mt-4 text-primary font-semibold">
+          View Details →
         </a>
       </div>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-20 bg-gray-800">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6">About Me</h2>
-      <p class="text-gray-300 leading-relaxed">
-        Saya adalah mahasiswa Teknik Robotika dan Kecerdasan Buatan Universitas Airlangga
-        yang memiliki ketertarikan pada autonomous robot, computer vision, dan AI.
-        Aktif dalam riset, kompetisi, serta pengembangan sistem robotika berbasis dunia nyata.
-      </p>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-10">Skills</h2>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-800 p-6 rounded-lg">
-          <h3 class="font-semibold mb-2">Programming</h3>
-          <p class="text-gray-400">Python, C/C++, JavaScript</p>
-        </div>
-
-        <div class="bg-gray-800 p-6 rounded-lg">
-          <h3 class="font-semibold mb-2">Robotics</h3>
-          <p class="text-gray-400">Mobile Robot, AGV, Embedded System</p>
-        </div>
-
-        <div class="bg-gray-800 p-6 rounded-lg">
-          <h3 class="font-semibold mb-2">AI & Vision</h3>
-          <p class="text-gray-400">OpenCV, Machine Learning, CNN</p>
-        </div>
+      <div class="bg-background p-8 rounded-xl">
+        <h3 class="font-bold text-lg">Face Attendance System</h3>
+        <p class="mt-2 text-gray-700">
+          Vision-based identity verification
+        </p>
+        <a href="projects/face-attendance.html"
+           class="inline-block mt-4 text-primary font-semibold">
+          View Details →
+        </a>
       </div>
-    </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="py-20 bg-gray-800">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-10">Projects</h2>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
-          <h3 class="font-semibold">AGV Vision Navigation</h3>
-          <p class="text-gray-400 mt-2">
-            APF + RRT + Computer Vision
-          </p>
-        </div>
-
-        <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
-          <h3 class="font-semibold">Face Attendance System</h3>
-          <p class="text-gray-400 mt-2">
-            OpenCV + Flask
-          </p>
-        </div>
-
-        <div class="bg-gray-900 p-6 rounded-lg hover:scale-105 transition">
-          <h3 class="font-semibold">Mobile Robot Controller</h3>
-          <p class="text-gray-400 mt-2">
-            Arduino + Bluetooth
-          </p>
-        </div>
+      <div class="bg-background p-8 rounded-xl">
+        <h3 class="font-bold text-lg">Mobile Robot Controller</h3>
+        <p class="mt-2 text-gray-700">
+          Embedded system for mobile robots
+        </p>
+        <a href="projects/mobile-robot.html"
+           class="inline-block mt-4 text-primary font-semibold">
+          View Details →
+        </a>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-20">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6">Contact</h2>
-      <p class="text-gray-400 mb-6">
-        Tertarik berdiskusi atau kolaborasi?
-      </p>
-      <a href="mailto:your-email@gmail.com"
-        class="inline-block px-6 py-2 bg-primary rounded hover:bg-indigo-700 transition">
-        Email Me
-      </a>
-    </div>
-  </section>
+<footer class="py-8 text-center text-gray-600 border-t border-primary">
+  © 2026 Egah Qusay Fatanasyah
+</footer>
 
-  <!-- FOOTER -->
-  <footer class="py-6 text-center text-gray-500 text-sm border-t border-gray-800">
-    © 2026 Egah Qusay. Built with Tailwind CSS.
-  </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
