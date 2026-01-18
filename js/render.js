@@ -2,65 +2,158 @@ fetch("data/content.json")
   .then(res => res.json())
   .then(data => {
 
-    // Site
+    /* ======================
+       SITE
+    ====================== */
     document.getElementById("site-title").textContent = data.site.title;
     document.getElementById("footer-text").textContent = data.site.footer;
 
-    // Navigation
+    /* ======================
+       NAVIGATION
+    ====================== */
     const nav = document.getElementById("nav-menu");
+    nav.innerHTML = ""; // clear before render
+
     data.navigation.forEach(item => {
       nav.innerHTML += `
         <li>
-          <a href="${item.href}" class="hover:text-primary">${item.label}</a>
+          <a href="${item.href}" class="hover:text-primary transition">
+            ${item.label}
+          </a>
         </li>
       `;
     });
 
-    // Hero
+    /* ======================
+       HERO
+    ====================== */
     document.getElementById("hero-title").textContent = data.hero.title;
-    document.getElementById("hero-subtitle").innerHTML = data.hero.subtitle.replace(/\n/g, "<br>");
+    document.getElementById("hero-subtitle").innerHTML =
+      data.hero.subtitle.replace(/\n/g, "<br>");
     document.getElementById("hero-tagline").textContent = data.hero.tagline;
 
-    // About
+    /* ======================
+       ABOUT
+    ====================== */
     document.getElementById("about-text").textContent = data.about.text;
 
-    // Journey
-    const journey = document.getElementById("journey-list");
-    data.journey.forEach(stage => {
-      journey.innerHTML += `
-        <div class="bg-surface p-8 rounded-xl border-l-4 border-primary">
-          <h3 class="text-xl font-bold text-primary">${stage.year}</h3>
-          <ul class="list-disc list-inside mt-2">
-            ${stage.items.map(i => `<li>${i}</li>`).join("")}
-          </ul>
-        </div>
-      `;
-    });
+    /* ======================
+    JOURNEY (ANIMATED CAROUSEL)
+    ====================== */
+    const journeyData = data.journey;
+    let current = 0;
+    let isAnimating = false;
 
-    // Projects
+    const leftBox = document.getElementById("journey-left");
+    const centerBox = document.getElementById("journey-center");
+    const rightBox = document.getElementById("journey-right");
+
+    const titleEl = document.getElementById("journey-title");
+    const shortEl = document.getElementById("journey-short");
+
+    const prevBtn = document.getElementById("journey-prev");
+    const nextBtn = document.getElementById("journey-next");
+
+    function setContent() {
+    const prev = (current - 1 + journeyData.length) % journeyData.length;
+    const next = (current + 1) % journeyData.length;
+
+    leftBox.querySelector("img").src = journeyData[prev].image;
+    centerBox.querySelector("img").src = journeyData[current].image;
+    rightBox.querySelector("img").src = journeyData[next].image;
+
+    titleEl.textContent =
+        `${journeyData[current].year} — ${journeyData[current].title}`;
+    shortEl.textContent = journeyData[current].short;
+    }
+
+function slide(direction) {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  // JARAK LEBIH PENDEK
+  const offset = direction === "next" ? "-40%" : "40%";
+
+  // Animate out
+  centerBox.style.transform = `translateX(${offset}) scale(0.96)`;
+  centerBox.style.opacity = "0";
+
+  setTimeout(() => {
+    // Update index
+    current =
+      direction === "next"
+        ? (current + 1) % journeyData.length
+        : (current - 1 + journeyData.length) % journeyData.length;
+
+    // Reset position (dekat, bukan jauh)
+    centerBox.style.transition = "none";
+    centerBox.style.transform =
+      `translateX(${direction === "next" ? "40%" : "-40%"}) scale(0.96)`;
+    centerBox.style.opacity = "0";
+
+    setContent();
+
+    // Force reflow
+    centerBox.offsetHeight;
+
+    // Animate back to center
+    centerBox.style.transition = "all 0.45s ease";
+    centerBox.style.transform = "translateX(0) scale(1)";
+    centerBox.style.opacity = "1";
+
+    isAnimating = false;
+  }, 300);
+}
+
+
+    // Init
+    setContent();
+
+    // Controls
+    nextBtn.addEventListener("click", () => slide("next"));
+    prevBtn.addEventListener("click", () => slide("prev"));
+
+
+
+
+    /* ======================
+       PROJECTS
+    ====================== */
     const projects = document.getElementById("project-list");
+    projects.innerHTML = ""; // clear before render
+
     data.projects.forEach(p => {
       projects.innerHTML += `
         <div class="bg-background p-8 rounded-xl">
           <h3 class="font-bold text-lg">${p.title}</h3>
           <p class="mt-2 text-gray-700">${p.description}</p>
-          <a href="${p.link}" class="inline-block mt-4 text-primary font-semibold">
+          <a href="${p.link}"
+             class="inline-block mt-4 text-primary font-semibold">
             View Details →
           </a>
         </div>
       `;
     });
 
-    // Contact
+    /* ======================
+       CONTACT
+    ====================== */
     document.getElementById("contact-text").textContent = data.contact.text;
+
     const links = document.getElementById("contact-links");
+    links.innerHTML = ""; // clear before render
+
     data.contact.links.forEach(l => {
       links.innerHTML += `
-        <a href="${l.url}" target="_blank" class="hover:text-primary transition">
+        <a href="${l.url}"
+           target="_blank"
+           class="hover:text-primary transition">
           ${l.label}
         </a>
       `;
     });
 
   })
-  .catch(err => console.error("Failed to load content:", err));
+  .catch(err => {
+    console.error("Failed to load content:", err);
+  });

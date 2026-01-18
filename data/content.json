@@ -23,36 +23,40 @@
   ],
 
   "journey": [
-    {
-      "year": "2022 — Foundation",
-      "items": [
-        "Started Robotics & AI at Universitas Airlangga"
-      ]
-    },
-    {
-      "year": "2023 — Exploration",
-      "items": [
-        "Junior Programming Support — ABU Robocon",
-        "Treasurer — Robotics Community",
-        "Silver Medalist — PIMNAS 36"
-      ]
-    },
-    {
-      "year": "2024 — Leadership",
-      "items": [
-        "Team Leader — ABU Robocon",
-        "Head — Robotics Community",
-        "Bangkit Academy — Machine Learning Path"
-      ]
-    },
-    {
-      "year": "2025 — Impact",
-      "items": [
-        "Minister of Professional Development — Student Executive Board",
-        "Community Empowerment Program — Ministry of Higher Education"
-      ]
-    }
-  ],
+  {
+    "id": "journey-2022",
+    "year": "2022",
+    "title": "Foundation Year",
+    "image": "assets/img/journey/2022.jpg",
+    "short": "Started Robotics & AI studies at Universitas Airlangga.",
+    "description": "This year marked the beginning of my academic journey in Robotics and Artificial Intelligence, focusing on foundational engineering and programming skills."
+  },
+  {
+    "id": "journey-2023",
+    "year": "2023",
+    "title": "Exploration & Achievement",
+    "image": "assets/img/journey/2023.jpg",
+    "short": "Active in robotics community and national competition.",
+    "description": "I joined the ABU Robocon team as a junior programming support, served as treasurer of the robotics community, and achieved a Silver Medal at PIMNAS 36."
+  },
+  {
+    "id": "journey-2024",
+    "year": "2024",
+    "title": "Leadership & Industry",
+    "image": "assets/img/journey/2024.jpg",
+    "short": "Leading robotics teams and learning industry ML.",
+    "description": "I led the ABU Robocon team, became the head of the robotics community, and completed the Bangkit Academy Machine Learning Path."
+  },
+  {
+    "id": "journey-2025",
+    "year": "2025",
+    "title": "Impact & Contribution",
+    "image": "assets/img/journey/2025.jpg",
+    "short": "Leadership and social impact programs.",
+    "description": "Serving as Minister of Professional Development and participating in community empowerment programs supported by the Ministry of Higher Education."
+  }
+    ],
+
 
   "projects": [
     {
