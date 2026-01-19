@@ -155,21 +155,33 @@ function slide(direction) {
     /* ======================
        PROJECTS
     ====================== */
-    const projects = document.getElementById("project-list");
-    projects.innerHTML = ""; // clear before render
+    const projectList = document.getElementById("project-list");
 
-    data.projects.forEach(p => {
-      projects.innerHTML += `
-        <div class="bg-background p-8 rounded-xl">
-          <h3 class="font-bold text-lg">${p.title}</h3>
-          <p class="mt-2 text-gray-700">${p.description}</p>
-          <a href="${p.link}"
-             class="inline-block mt-4 text-primary font-semibold">
-            View Details →
-          </a>
+    data.projects.forEach(project => {
+      const card = document.createElement("a");
+      card.href = project.link;
+      card.className = `
+        bg-background rounded-2xl shadow-md overflow-hidden
+        hover:shadow-xl hover:-translate-y-1 transition
+      `;
+
+      card.innerHTML = `
+        <img
+          src="${project.image}"
+          alt="${project.title}"
+          class="w-full h-48 object-cover">
+
+        <div class="p-6 space-y-2">
+          <h3 class="text-xl font-bold">${project.title}</h3>
+          <p class="text-gray-700 text-sm">
+            ${project.description}
+          </p>
         </div>
       `;
+
+      projectList.appendChild(card);
     });
+
 
     /* ======================
        CONTACT

@@ -58,23 +58,33 @@
     ],
 
 
-  "projects": [
-    {
-      "title": "Rice Production Regression (Indonesia, 2023)",
-      "description": "Linear regression analysis to predict rice production based on harvested area using BPS data",
-      "link": "projects/rice_production_regression.html"
-    },
-    {
-      "title": "Face Attendance System",
-      "description": "Vision-based identity verification",
-      "link": "projects/face-attendance.html"
-    },
-    {
-      "title": "Mobile Robot Controller",
-      "description": "Embedded system for mobile robots",
-      "link": "projects/mobile-robot.html"
-    }
-  ],
+"projects": [
+  {
+    "title": "Rice Production Regression (Indonesia, 2023)",
+    "description": "Linear regression analysis to predict rice production based on harvested area using BPS data",
+    "image": "assets/img/project/rice_production_regression/green_rice.jpg",
+    "link": "projects/rice_production_regression.html"
+  },
+  {
+    "title": "Face Attendance System",
+    "description": "Vision-based identity verification using computer vision",
+    "image": "assets/img/project/face_attendance/cover.png",
+    "link": "projects/face-attendance.html"
+  },
+  {
+    "title": "Mobile Robot Controller",
+    "description": "Embedded system and controller design for mobile robots",
+    "image": "assets/img/project/mobile_robot/cover.png",
+    "link": "projects/mobile-robot.html"
+  },
+  {
+    "title": "Ball Detection",
+    "description": "Ball Detection for Autonomous Robot",
+    "image": "assets/img/project/mobile_robot/cover.png",
+    "link": "projects/mobile-robot.html"
+  }
+],
+
 
   "contact": {
     "text": "Interested in collaboration, research discussion, or professional opportunities?",
