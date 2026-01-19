@@ -60,9 +60,9 @@
 
   "projects": [
     {
-      "title": "AGV Vision Navigation",
-      "description": "Autonomous navigation using APF & RRT",
-      "link": "projects/agv-navigation.html"
+      "title": "Rice Production Regression (Indonesia, 2023)",
+      "description": "Linear regression analysis to predict rice production based on harvested area using BPS data",
+      "link": "projects/rice_production_regression.html"
     },
     {
       "title": "Face Attendance System",

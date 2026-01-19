@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rice Production Regression | Egah Qusay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+<main class="max-w-4xl mx-auto px-6 py-20 space-y-12">
+
+  <!-- HEADER -->
+  <section class="space-y-4">
+    <h1 class="text-3xl font-bold">
+      Linear Regression Analysis of Rice Production in Indonesia (2023)
+    </h1>
+
+    <p class="text-gray-600">
+      This project applies <strong>Linear Regression</strong> to analyze and predict rice
+      production across Indonesian provinces using harvested area data published by
+      <strong>Badan Pusat Statistik (BPS)</strong>.
+    </p>
+
+    <p class="text-sm text-gray-500">
+      Python · Pandas · Scikit-learn · Matplotlib · Google Colab
+    </p>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="space-y-2">
+    <h2 class="font-bold text-xl">Problem & Motivation</h2>
+    <p>
+      Rice is a strategic agricultural commodity in Indonesia.
+      Understanding the relationship between harvested area and rice production
+      is essential for agricultural planning, food security analysis,
+      and policy evaluation.
+    </p>
+  </section>
+
+  <!-- DATASET -->
+  <section class="space-y-2">
+    <h2 class="font-bold text-xl">Dataset Overview</h2>
+    <ul class="list-disc list-inside">
+      <li><strong>Source:</strong> Badan Pusat Statistik (BPS)</li>
+      <li><strong>Year:</strong> 2023</li>
+      <li><strong>Level:</strong> Province</li>
+      <li><strong>Variables:</strong> Harvested Area (ha), Rice Production (tons)</li>
+    </ul>
+  </section>
+
+  <!-- EDA -->
+  <section class="space-y-4">
+    <h2 class="font-bold text-xl">Exploratory Data Analysis (EDA)</h2>
+    <p>
+      An initial scatter plot was generated to explore the relationship between
+      harvested area and rice production. The visualization shows a strong positive
+      linear relationship, supporting the use of linear regression.
+    </p>
+
+    <img
+      src="../assets/img/project/rice_production_regression/01_eda_scatter_harvested_area_vs_production.png"
+      alt="EDA Scatter Plot"
+      class="block mx-auto max-w-full md:max-w-3xl rounded-xl shadow-md">
+  </section>
+
+  <!-- MODEL -->
+  <section class="space-y-4">
+    <h2 class="font-bold text-xl">Modeling Approach</h2>
+    <p>
+      A simple linear regression model was trained to model the relationship
+      between harvested area and rice production.
+    </p>
+
+    <img
+      src="../assets/img/project/rice_production_regression/02_model_scatter_regression_line.png"
+      alt="Regression Line"
+      class="block mx-auto max-w-full md:max-w-3xl rounded-xl shadow-md">
+  </section>
+
+  <!-- EVALUATION -->
+  <section class="space-y-6">
+    <h2 class="font-bold text-xl">Model Evaluation</h2>
+
+    <!-- METRICS -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+      <div class="bg-white p-4 rounded-xl shadow">
+        <p class="font-bold">MAE</p>
+        <p>66,269 tons</p>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow">
+        <p class="font-bold">RMSE</p>
+        <p>106,381 tons</p>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow">
+        <p class="font-bold">R²</p>
+        <p>0.995</p>
+      </div>
+    </div>
+
+    <img
+      src="../assets/img/project/rice_production_regression/03_evaluation_actual_vs_predicted.png"
+      alt="Actual vs Predicted"
+      class="block mx-auto max-w-full md:max-w-3xl rounded-xl shadow-md">
+
+    <img
+      src="../assets/img/project/rice_production_regression/04_evaluation_residual_plot.png"
+      alt="Residual Plot"
+      class="block mx-auto max-w-full md:max-w-3xl rounded-xl shadow-md">
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="space-y-2">
+    <h2 class="font-bold text-xl">Key Insights</h2>
+    <ul class="list-disc list-inside">
+      <li>Rice production increases proportionally with harvested area.</li>
+      <li>The relationship is almost linear at the provincial level.</li>
+      <li>Linear regression performs very well for aggregated agricultural data.</li>
+    </ul>
+  </section>
+
+  <!-- LIMITATIONS -->
+  <section class="space-y-2">
+    <h2 class="font-bold text-xl">Limitations & Future Work</h2>
+    <p>
+      The model uses only one explanatory variable. Future work may include
+      productivity, climate factors, and time-series analysis.
+    </p>
+  </section>
+
+  <!-- LINKS -->
+  <section class="flex gap-6">
+    <a
+      href="https://github.com/egahqusayf/Linear-Regression-Analysis-of-Rice-Production-in-Indonesia-2023"
+      class="text-blue-600 font-semibold"
+      target="_blank">
+      View on GitHub
+    </a>
+
+    <a href="../index.html" class="text-gray-600 font-semibold">
+      ← Back to Portfolio
+    </a>
+  </section>
+
+</main>
+
+</body>
+</html>
