@@ -6,7 +6,7 @@
 
   "hero": {
     "title": "Hi, I’m Egah",
-    "subtitle": "Robotics & Artificial Intelligence Student (8th Semester)\nAutonomous Systems • Computer Vision • Technical Leadership",
+    "subtitle": "Robotics & Artificial Intelligence Student (8th Semester)/nAutonomous Systems • Computer Vision • Technical Leadership",
     "tagline": "Building intelligent systems with real-world impact."
   },
 
@@ -60,16 +60,16 @@
 
 "projects": [
   {
-    "title": "Rice Production Regression (Indonesia, 2023)",
+    "title": "Linear Regression Analysis of Rice Production in Indonesia 2023",
     "description": "Linear regression analysis to predict rice production based on harvested area using BPS data",
     "image": "assets/img/project/rice_production_regression/green_rice.jpg",
     "link": "projects/rice_production_regression.html"
   },
   {
-    "title": "Face Attendance System",
-    "description": "Vision-based identity verification using computer vision",
-    "image": "assets/img/project/face_attendance/cover.png",
-    "link": "projects/face-attendance.html"
+  "title": "Housing Vulnerability in Indonesia Using Socioeconomic Infrastructure Data and Logistic Regression",
+  "description": "Logistic regression analysis of housing vulnerability using socioeconomic and infrastructure indicators in Indonesia",
+  "image": "/assets/img/project/housing_vulnerability/02_logistic_regression_coefficients.png",
+  "link": "projects/housing-vulnerability-in-indonesia-using-socioeconomic-infrastructure-data-and-logistic-regression.html"
   },
   {
     "title": "Mobile Robot Controller",
