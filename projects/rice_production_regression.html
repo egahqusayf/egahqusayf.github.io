@@ -14,7 +14,7 @@
   <!-- HEADER -->
   <section class="space-y-4">
     <h1 class="text-3xl font-bold">
-      Linear Regression Analysis of Rice Production in Indonesia (2023)
+      Linear Regression Analysis of Rice Production in Indonesia 2023
     </h1>
 
     <p class="text-gray-600">
@@ -33,9 +33,9 @@
     <h2 class="font-bold text-xl">Problem & Motivation</h2>
     <p>
       Rice is a strategic agricultural commodity in Indonesia.
-      Understanding the relationship between harvested area and rice production
-      is essential for agricultural planning, food security analysis,
-      and policy evaluation.
+      Understanding how harvested area influences rice production is crucial
+      for agricultural planning, food security assessment, and evidence-based
+      policy evaluation at the provincial level.
     </p>
   </section>
 
@@ -53,10 +53,18 @@
   <!-- EDA -->
   <section class="space-y-4">
     <h2 class="font-bold text-xl">Exploratory Data Analysis (EDA)</h2>
+
     <p>
-      An initial scatter plot was generated to explore the relationship between
-      harvested area and rice production. The visualization shows a strong positive
-      linear relationship, supporting the use of linear regression.
+      The scatter plot below visualizes the relationship between harvested area
+      and rice production across Indonesian provinces. Each point represents
+      one province.
+    </p>
+
+    <p>
+      A clear <strong>positive linear trend</strong> is observed, indicating that
+      provinces with larger harvested areas consistently produce more rice.
+      The absence of strong nonlinear patterns or extreme outliers suggests
+      that a linear model is suitable for this dataset.
     </p>
 
     <img
@@ -68,9 +76,18 @@
   <!-- MODEL -->
   <section class="space-y-4">
     <h2 class="font-bold text-xl">Modeling Approach</h2>
+
     <p>
-      A simple linear regression model was trained to model the relationship
-      between harvested area and rice production.
+      A simple linear regression model was trained to quantify the relationship
+      between harvested area (independent variable) and rice production
+      (dependent variable).
+    </p>
+
+    <p>
+      The regression line closely follows the distribution of the data points,
+      indicating that the model effectively captures the underlying trend.
+      The relatively tight spread of points around the line suggests a stable
+      and consistent relationship across provinces.
     </p>
 
     <img
@@ -99,10 +116,29 @@
       </div>
     </div>
 
+    <p>
+      The plot below compares actual rice production values with model predictions.
+      Most points lie very close to the diagonal reference line, indicating
+      high predictive accuracy across provinces with varying production scales.
+    </p>
+
+    <p>
+      An R² score of <strong>0.995</strong> implies that nearly all variability in
+      rice production can be explained by harvested area alone, demonstrating
+      the strong explanatory power of the model.
+    </p>
+
     <img
       src="../assets/img/project/rice_production_regression/03_evaluation_actual_vs_predicted.png"
       alt="Actual vs Predicted"
       class="block mx-auto max-w-full md:max-w-3xl rounded-xl shadow-md">
+
+    <p>
+      The residual plot below shows no clear systematic pattern, indicating that
+      model errors are randomly distributed. This supports the assumptions of
+      linear regression and suggests that the model does not exhibit significant
+      bias across different production levels.
+    </p>
 
     <img
       src="../assets/img/project/rice_production_regression/04_evaluation_residual_plot.png"
@@ -114,9 +150,9 @@
   <section class="space-y-2">
     <h2 class="font-bold text-xl">Key Insights</h2>
     <ul class="list-disc list-inside">
-      <li>Rice production increases proportionally with harvested area.</li>
-      <li>The relationship is almost linear at the provincial level.</li>
-      <li>Linear regression performs very well for aggregated agricultural data.</li>
+      <li>Harvested area is a dominant factor influencing rice production at the provincial level.</li>
+      <li>The relationship between area and production is strongly linear and consistent.</li>
+      <li>Simple linear regression performs exceptionally well for aggregated agricultural data.</li>
     </ul>
   </section>
 
@@ -124,8 +160,9 @@
   <section class="space-y-2">
     <h2 class="font-bold text-xl">Limitations & Future Work</h2>
     <p>
-      The model uses only one explanatory variable. Future work may include
-      productivity, climate factors, and time-series analysis.
+      This model relies on a single explanatory variable. Future improvements
+      may include yield per hectare, climate variables, irrigation coverage,
+      or multi-year time-series data to capture temporal dynamics.
     </p>
   </section>
 
