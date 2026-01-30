@@ -24,36 +24,100 @@
 
   "journey": [
   {
-    "id": "journey-2022",
+    "id": "journey-2022-commander",
     "year": "2022",
-    "title": "Foundation Year",
-    "image": "assets/img/journey/2022.jpg",
-    "short": "Started Robotics & AI studies at Universitas Airlangga.",
-    "description": "This year marked the beginning of my academic journey in Robotics and Artificial Intelligence, focusing on foundational engineering and programming skills."
+    "title": "Level Commander of the 3rd cohort of Robotics & AI Engineering",
+    "image": "assets/img/journey/level-commander.jpg",
+    "short": "Served as Level Commander for the 3rd cohort of Robotics and Artificial Intelligence Engineering, leading and supporting the academic and non-academic processes of more than 90 students.",
+    "description": "Served as Level Commander for the 3rd cohort of Robotics and Artificial Intelligence Engineering, leading and supporting the academic and non-academic processes of more than 90 students."
   },
   {
-    "id": "journey-2023",
+    "id": "journey-2023-intern",
     "year": "2023",
-    "title": "Exploration & Achievement",
-    "image": "assets/img/journey/2023.jpg",
-    "short": "Active in robotics community and national competition.",
-    "description": "I joined the ABU Robocon team as a junior programming support, served as treasurer of the robotics community, and achieved a Silver Medal at PIMNAS 36."
+    "title": "Best Intern Staff – Ministry of Human Resource Development BEM FTMM 2023",
+    "image": "assets/img/journey/bem-2023.jpg",
+    "short": "Awarded Best Intern at the Ministry of Human Resource Development BEM FTMM, demonstrating strong work ethic, initiative, and organizational contribution.",
+    "description": "Awarded Best Intern at the Ministry of Human Resource Development BEM FTMM, demonstrating strong work ethic, initiative, and organizational contribution."
   },
   {
-    "id": "journey-2024",
+    "id": "journey-2023-treasurer",
+    "year": "2023",
+    "title": "Treasurer Airlangga Robotics Community 2023",
+    "image": "assets/img/journey/roboticscom-2023.jpg",
+    "short": "Managed financial planning and accountability for the Airlangga University Robotics Community, supporting sustainable organizational operations.",
+    "description": "Managed financial planning and accountability for the Airlangga University Robotics Community, supporting sustainable organizational operations."
+  },
+  {
+    "id": "journey-2023-junior-programmer",
+    "year": "2023",
+    "title": "Junior Programmer Airlangga Abu Robocon Team 2023",
+    "image": "assets/img/journey/robocon-2023.jpg",
+    "short": "Contributed as a Junior Programmer in the Abu Robocon Team, focusing on software development, logic implementation, and robotics system integration.",
+    "description": "Contributed as a Junior Programmer in the Abu Robocon Team, focusing on software development, logic implementation, and robotics system integration."
+  },
+  {
+    "id": "journey-2023-social",
+    "year": "2023",
+    "title": "Staf of Social & Environmental Ministry 2023",
+    "image": "assets/img/journey/bem-2024.jpg",
+    "short": "Lead Organizer of a Student Blood Donation Program involving 50+ student donors, alongside community service activities at an inclusive children’s foundation and beach clean-up programs in Surabaya.",
+    "description": "Lead Organizer of a Student Blood Donation Program involving 50+ student donors, alongside community service activities at an inclusive children’s foundation and beach clean-up programs in Surabaya."
+  },
+  {
+    "id": "journey-2023-pimnas",
+    "year": "2023",
+    "title": "Silver Medalist – PIMNAS 36",
+    "image": "assets/img/journey/pimnas.jpg",
+    "short": "Awarded a Silver Medal in the Poster Category at the 36th PIMNAS under the Futuristic Written Idea Scheme (2023). Presented an innovative concept of a Sustainable Marine Maintenance System based on Artificial Intelligence (AI) and the Internet of Things (IoT), integrating principles of physics and modern technology.",
+    "description": "Awarded a Silver Medal in the Poster Category at the 36th PIMNAS under the Futuristic Written Idea Scheme (2023). Presented an innovative concept of a Sustainable Marine Maintenance System based on Artificial Intelligence (AI) and the Internet of Things (IoT), integrating principles of physics and modern technology."
+  },
+  {
+    "id": "journey-2024-robocon-head",
     "year": "2024",
-    "title": "Leadership & Industry",
-    "image": "assets/img/journey/2024.jpg",
-    "short": "Leading robotics teams and learning industry ML.",
-    "description": "I led the ABU Robocon team, became the head of the robotics community, and completed the Bangkit Academy Machine Learning Path."
+    "title": "Team Leader Airlangga Abu Robocon 2024",
+    "image": "assets/img/journey/robocon-2024.jpg",
+    "short": "Led the Airlangga University Abu Robocon Team at the 2024 Indonesian Abu Robocon Contest, successfully advancing the team to the national stage and qualifying for the playoff round for the first time in its history.",
+    "description": "Led the Airlangga University Abu Robocon Team at the 2024 Indonesian Abu Robocon Contest, successfully advancing the team to the national stage and qualifying for the playoff round for the first time in its history."
   },
   {
-    "id": "journey-2025",
+    "id": "journey-2024-community-head",
+    "year": "2024",
+    "title": "Head of Airlangga Robotics Community 2024",
+    "image": "assets/img/journey/roboticscom-2024.jpg",
+    "short": "Led more than 80 members, 5 managerial divisions, and 7 competition teams, successfully elevating the Airlangga Robotics Community to the Top 6 university rankings.",
+    "description": "Led more than 80 members, 5 managerial divisions, and 7 competition teams, successfully elevating the Airlangga Robotics Community to the Top 6 university rankings."
+  },
+  {
+    "id": "journey-2024-mbi-trainer",
+    "year": "2024",
+    "title": "MBI Robotics Trainer 2024",
+    "image": "assets/img/journey/mbi-trainer.jpg",
+    "short": "Provided hands-on robotics training, focusing on fundamental electronics, programming, and problem-solving skills",
+    "description": "Provided hands-on robotics training, focusing on fundamental electronics, programming, and problem-solving skills."
+  },
+  {
+    "id": "journey-2024-saim-trainer",
+    "year": "2024–2025",
+    "title": "Saim Robotics Trainer 2025",
+    "image": "assets/img/journey/saim-trainer.jpeg",
+    "short": "Mentored students in applied robotics projects, emphasizing logical thinking, teamwork, and practical engineering implementation.",
+    "description": "Mentored students in applied robotics projects, emphasizing logical thinking, teamwork, and practical engineering implementation."
+  },
+  {
+    "id": "journey-2025-minister",
     "year": "2025",
-    "title": "Impact & Contribution",
-    "image": "assets/img/journey/2025.jpg",
-    "short": "Leadership and social impact programs.",
-    "description": "Serving as Minister of Professional Development and participating in community empowerment programs supported by the Ministry of Higher Education."
+    "title": "Minister of Professional Development BEM UNAIR 2025",
+    "image": "assets/img/journey/bem-2025.jpeg",
+    "short": "Led professional development initiatives to enhance student skills, career readiness, and future-oriented competencies.",
+    "description": "Led professional development initiatives to enhance student skills, career readiness, and future-oriented competencies."
+  },
+  {
+  "id": "journey-2025-community",
+  "year": "2025",
+  "title": "Funded Community Empowerment Program – Ministry of Higher Education, Science, and Technology (2025)",
+  "image": "assets/img/journey/pm-bem.jpeg",
+  "short": "Initiated a community empowerment program focused on optimizing circular economy practices for dairy cattle farmers through technology-based waste processing innovations and social community empowerment in Bermi , Krucil . Played a crucial role as the core team responsible for handling and developing the technological aspects of the program.",
+  "description": "Initiated a community empowerment program focused on optimizing circular economy practices for dairy cattle farmers through technology-based waste processing innovations and social community empowerment in Bermi Village, Krucil District. Played a crucial role as the core team responsible for handling and developing the technological aspects of the program."
   }
     ],
 

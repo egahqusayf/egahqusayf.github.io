@@ -55,17 +55,18 @@ fetch("data/content.json")
     const nextBtn = document.getElementById("journey-next");
 
     function setContent() {
-    const prev = (current - 1 + journeyData.length) % journeyData.length;
-    const next = (current + 1) % journeyData.length;
+      const prev = (current - 1 + journeyData.length) % journeyData.length;
+      const next = (current + 1) % journeyData.length;
 
-    leftBox.querySelector("img").src = journeyData[prev].image;
-    centerBox.querySelector("img").src = journeyData[current].image;
-    rightBox.querySelector("img").src = journeyData[next].image;
+      leftBox.querySelector("img").src = journeyData[prev].image;
+      centerBox.querySelector("img").src = journeyData[current].image;
+      rightBox.querySelector("img").src = journeyData[next].image;
 
-    titleEl.textContent =
-        `${journeyData[current].year} — ${journeyData[current].title}`;
-    shortEl.textContent = journeyData[current].short;
+      // HANYA TITLE, TANPA YEAR
+      titleEl.textContent = journeyData[current].title;
+      shortEl.textContent = journeyData[current].short;
     }
+
 
 function slide(direction) {
   if (isAnimating) return;
