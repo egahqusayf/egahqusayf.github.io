@@ -28,9 +28,10 @@ fetch("data/content.json")
        HERO
     ====================== */
     document.getElementById("hero-title").textContent = data.hero.title;
-    document.getElementById("hero-subtitle").innerHTML =
-      data.hero.subtitle.replace(/\n/g, "<br>");
-    document.getElementById("hero-tagline").textContent = data.hero.tagline;
+    // document.getElementById("hero-subtitle").innerHTML =
+    // data.hero.subtitle.replace(/\n/g, "<br>");
+    // document.getElementById("hero-tagline").textContent = data.hero.tagline;
+
 
     /* ======================
        ABOUT
