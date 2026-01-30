@@ -140,12 +140,6 @@
     "description": "Embedded system and controller design for mobile robots",
     "image": "assets/img/project/mobile_robot/cover.png",
     "link": "projects/mobile-robot.html"
-  },
-  {
-    "title": "Ball Detection",
-    "description": "Ball Detection for Autonomous Robot",
-    "image": "assets/img/project/mobile_robot/cover.png",
-    "link": "projects/mobile-robot.html"
   }
 ],
 
@@ -153,9 +147,9 @@
   "contact": {
     "text": "Interested in collaboration, research discussion, or professional opportunities?",
     "links": [
-      { "label": "Email", "url": "mailto:your-email@gmail.com" },
-      { "label": "GitHub", "url": "https://github.com/username" },
-      { "label": "LinkedIn", "url": "https://linkedin.com/in/username" }
+      { "label": "Email", "url": "mailto:egahqusayf.d@gmail.com" },
+      { "label": "GitHub", "url": "https://github.com/egahqusayf" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/egahqusayf" }
     ]
   }
 }
