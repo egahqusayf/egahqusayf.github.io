@@ -136,10 +136,10 @@
   "link": "projects/housing-vulnerability-in-indonesia-using-socioeconomic-infrastructure-data-and-logistic-regression.html"
   },
   {
-    "title": "Mobile Robot Controller",
-    "description": "Embedded system and controller design for mobile robots",
-    "image": "assets/img/project/mobile_robot/cover.png",
-    "link": "projects/mobile-robot.html"
+  "title": "Sentiment Analysis of YouTube Comments on the Indonesian Vice President Using Fine-Tuned XLM-RoBERTa",
+  "description": "Large-scale sentiment analysis of 80k+ YouTube comments using fine-tuned XLM-RoBERTa and a custom annotation tool",
+  "image": "assets/img/project/sentiment_gibran/cover.png",
+  "link": "projects/sentiment-gibran-youtube.html"
   }
 ],
 
