@@ -126,7 +126,7 @@
   {
     "title": "Linear Regression Analysis of Rice Production in Indonesia 2023",
     "description": "Linear regression analysis to predict rice production based on harvested area using BPS data",
-    "image": "assets/img/project/rice_production_regression/green_rice.jpg",
+    "image": "/assets/img/project/rice_production_regression/green_rice.jpg",
     "link": "projects/rice_production_regression.html"
   },
   {
@@ -136,9 +136,9 @@
   "link": "projects/housing-vulnerability-in-indonesia-using-socioeconomic-infrastructure-data-and-logistic-regression.html"
   },
   {
-  "title": "Sentiment Analysis of YouTube Comments on the Indonesian Vice President Using Fine-Tuned XLM-RoBERTa",
-  "description": "Large-scale sentiment analysis of 80k+ YouTube comments using fine-tuned XLM-RoBERTa and a custom annotation tool",
-  "image": "assets/img/project/sentiment_gibran/cover.png",
+  "title": "Public Sentiment Analysis of YouTube Comments Toward Indonesia’s Vice President Gibran Rakabuming Raka Using XLM-RoBERTa",
+  "description": "A large-scale NLP study analyzing 80,000+ YouTube comments to measure public sentiment toward Indonesia’s Vice President Gibran Rakabuming Raka using a fine-tuned XLM-RoBERTa model and a custom web-based annotation tool.",
+  "image": "/assets/img/project/sentiment_gibran/gibran.png",
   "link": "projects/sentiment-gibran-youtube.html"
   }
 ],
