@@ -1,0 +1,11 @@
+{
+  "name": "Egah Qusay Fatanasyah Portfolio",
+  "short_name": "Egah Portfolio",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#0b0d10",
+  "icons": [
+    {"src": "assets/img/brand/eqf-projects-logo.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

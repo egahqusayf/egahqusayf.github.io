@@ -1,147 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Egah Qusay Fatanasyah — Robotics, Artificial Intelligence, software, and technical leadership.">
+  <meta name="theme-color" content="#0b0d10">
+  <meta property="og:title" content="Egah Qusay Fatanasyah | Robotics & AI Portfolio">
+  <meta property="og:description" content="Selected AI, robotics, software, and data projects with complete case studies.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/profile.jpg">
   <title>Egah Qusay Fatanasyah | Robotics & AI Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            background: '#ECF4E8',
-            surface: '#CBF3BB',
-            accent: '#ABE7B2',
-            primary: '#93BFC7'
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="icon" href="assets/img/brand/eqf-projects-logo.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/site.css">
 </head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
 
-<body class="bg-background text-gray-800 font-sans scroll-smooth overflow-x-hidden">
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <img src="assets/img/brand/eqf-projects-logo.png" alt="Egah Qusay Fatanasyah portfolio emblem">
+      <span><strong>Egah Qusay Fatanasyah</strong><small>PORTFOLIO</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Primary navigation"></nav>
+    <button class="command-button" id="command-button" aria-label="Open quick navigation"><span>⌘K</span><span>Search</span></button>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme"><span class="theme-icon">◐</span><span class="theme-label">Theme</span></button>
+  </header>
 
-<!-- NAVBAR -->
-<nav class="fixed w-full bg-background/90 backdrop-blur border-b border-primary z-50">
-  <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
-    <h1 id="site-title" class="text-lg md:text-2xl font-extrabold"></h1>
-    <ul id="nav-menu"
-        class="hidden md:flex gap-8 text-base md:text-lg font-semibold">
-    </ul>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center pt-32 px-4">
-  <div class="text-center max-w-3xl">
-    <h1 id="hero-title"
-        class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"></h1>
-
-    <p id="hero-subtitle"
-       class="mt-6 text-base sm:text-lg text-gray-700 whitespace-pre-line"></p>
-
-    <p id="hero-tagline"
-       class="mt-4 text-sm italic text-gray-600"></p>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="py-20 bg-surface">
-  <div class="max-w-4xl mx-auto px-4 md:px-6">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">About</h2>
-    <p id="about-text"
-       class="text-base md:text-lg leading-relaxed text-gray-700"></p>
-  </div>
-</section>
-
-<!-- JOURNEY -->
-<section id="journey" class="py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 md:px-6 text-center">
-
-    <h2 class="text-3xl md:text-4xl font-bold mb-12">Journey</h2>
-
-    <div class="relative flex items-center justify-center">
-
-      <!-- PREV -->
-      <button id="journey-prev"
-        class="absolute left-2 md:left-12 text-4xl md:text-6xl font-bold z-10
-               hover:scale-110 transition select-none">
-        ‹
-      </button>
-
-      <!-- CAROUSEL -->
-      <div class="flex items-center gap-6 md:gap-10">
-
-        <!-- LEFT (HIDDEN ON MOBILE) -->
-        <div id="journey-left"
-          class="hidden md:block w-72 opacity-50 scale-90 transition-all duration-500">
-          <img class="w-full h-56 object-cover rounded-xl shadow-md">
+  <main id="main-content">
+    <section class="hero section-pad">
+      <div class="hero-grid shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" id="hero-eyebrow"></p>
+          <h1 id="hero-title"></h1>
+          <p class="hero-lead" id="hero-subtitle"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore selected work <span>↘</span></a>
+            <a class="button button-ghost" href="mailto:egahqusayf.d@gmail.com">Start a conversation</a>
+          </div>
+          <p class="availability" id="hero-tagline"><span></span></p>
         </div>
-
-        <!-- CENTER -->
-        <div id="journey-center"
-          class="w-full max-w-sm md:max-w-[28rem] scale-100 transition-all duration-500">
-          <img
-            class="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg mb-6">
-          <h3 id="journey-title"
-              class="text-xl md:text-3xl font-bold mb-2"></h3>
-          <p id="journey-short"
-              class="text-gray-700 text-sm md:text-lg"></p>
+        <div class="hero-visual reveal">
+          <div class="portrait-frame">
+            <img src="assets/img/profile.jpg" alt="Portrait of Egah Qusay Fatanasyah">
+            <div class="portrait-note"><span>Current focus</span><strong>AI · Robotics · Software</strong></div>
+          </div>
+          <div class="orbital-note orbital-note-a">AI</div>
+          <div class="orbital-note orbital-note-b">01</div>
         </div>
-
-        <!-- RIGHT (HIDDEN ON MOBILE) -->
-        <div id="journey-right"
-          class="hidden md:block w-72 opacity-50 scale-90 transition-all duration-500">
-          <img class="w-full h-56 object-cover rounded-xl shadow-md">
-        </div>
-
       </div>
+      <div class="stats shell" id="stats"></div>
+    </section>
 
-      <!-- NEXT -->
-      <button id="journey-next"
-        class="absolute right-2 md:right-12 text-4xl md:text-6xl font-bold z-10
-               hover:scale-110 transition select-none">
-        ›
-      </button>
+    <section class="ticker" aria-label="Core capabilities">
+      <div class="ticker-track" id="skill-ticker"></div>
+    </section>
 
+    <section class="section-pad" id="work">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">SELECTED WORK</p><h2>Projects built to be understood, tested, and used.</h2></div>
+        </div>
+        <div class="project-toolbar reveal">
+          <div class="project-filters" id="project-filters" aria-label="Project filters"></div>
+        </div>
+        <div class="project-carousel reveal" id="project-carousel">
+          <button class="carousel-arrow carousel-arrow-left" id="project-prev" aria-label="Previous project">←</button>
+          <div class="project-viewport" id="project-viewport" tabindex="0" aria-label="Project carousel">
+            <div class="project-track" id="project-list"></div>
+          </div>
+          <button class="carousel-arrow carousel-arrow-right" id="project-next" aria-label="Next project">→</button>
+        </div>
+        <div class="carousel-footer reveal">
+          <div class="carousel-dots" id="project-dots" aria-label="Project pages"></div>
+          <button class="autoplay-toggle" id="project-autoplay" aria-label="Pause project autoplay">Pause autoplay</button>
+          <div class="carousel-progress" aria-hidden="true"><span id="project-progress"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section-pad">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">HOW I WORK</p><h2>Engineering with a visible chain of reasoning.</h2></div>
+        </div>
+        <div class="process-grid">
+          <article class="process-card reveal"><span>01</span><h3>Frame the problem</h3><p>Translate a broad idea into constraints, measurable behavior, users, and acceptance criteria.</p></article>
+          <article class="process-card reveal"><span>02</span><h3>Build the system</h3><p>Separate responsibilities, design fallbacks, and choose technology based on the deployment environment.</p></article>
+          <article class="process-card reveal"><span>03</span><h3>Validate & document</h3><p>Test the critical path, show evidence, record limitations, and make the work easy to reproduce.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad journey-section" id="journey">
+      <div class="shell">
+        <div class="section-heading journey-heading reveal">
+          <div><p class="eyebrow">JOURNEY</p><h2>Growth shaped by teams, competition, and responsibility.</h2></div>
+          <p>A compact visual timeline that automatically changes every six seconds.</p>
+        </div>
+        <div class="journey-carousel reveal" id="journey-carousel">
+          <button class="journey-arrow journey-arrow-left" id="journey-prev" aria-label="Previous journey item">←</button>
+          <div class="journey-stage" id="journey-stage">
+            <div class="journey-media"><img id="journey-image" alt="Journey documentation"><span id="journey-year"></span></div>
+            <div class="journey-copy"><p class="journey-index" id="journey-index"></p><h3 id="journey-title"></h3><p id="journey-short"></p><div class="journey-dots" id="journey-dots"></div></div>
+          </div>
+          <button class="journey-arrow journey-arrow-right" id="journey-next" aria-label="Next journey item">→</button>
+        </div>
+        <div class="journey-progress" aria-hidden="true"><span id="journey-progress"></span></div>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="about">
+      <div class="shell about-grid">
+        <div class="about-title reveal"><p class="eyebrow">ABOUT</p><h2>Robotics mindset.<br>Software discipline.<br>Human-centered leadership.</h2></div>
+        <div class="about-copy reveal"><p id="about-text"></p><div class="skill-cloud" id="skill-cloud"></div></div>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact">
+      <div class="shell contact-card reveal">
+        <p class="eyebrow">CONTACT</p>
+        <h2>Have a problem worth building for?</h2>
+        <p id="contact-text"></p>
+        <div class="contact-links" id="contact-links"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell"><p id="footer-text"></p><a href="#top">Back to top ↑</a></footer>
+  <button class="floating-top" id="floating-top" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="command-palette" id="command-palette" aria-hidden="true">
+    <button class="command-backdrop" id="command-backdrop" aria-label="Close quick navigation"></button>
+    <div class="command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-title">
+      <div class="command-search"><span>⌕</span><input id="command-input" type="search" placeholder="Search sections and projects…" autocomplete="off"><kbd>Esc</kbd></div>
+      <p id="command-title">Quick navigation</p>
+      <div class="command-results" id="command-results"></div>
     </div>
-
   </div>
-</section>
 
-<!-- PROJECTS -->
-<section id="projects" class="py-20 bg-surface">
-  <div class="max-w-6xl mx-auto px-4 md:px-6">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12">Selected Projects</h2>
-
-    <div
-      id="project-list"
-      class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-20">
-  <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">Contact & Social</h2>
-    <p id="contact-text"
-       class="text-base md:text-lg text-gray-600 mb-10"></p>
-
-    <div id="contact-links"
-         class="flex flex-wrap justify-center gap-6 text-base font-semibold">
-    </div>
-  </div>
-</section>
-
-<footer class="py-6 text-center text-gray-600 border-t border-primary text-sm">
-  <span id="footer-text"></span>
-</footer>
-
-<script src="js/render.js"></script>
+  <script src="js/site.js"></script>
 </body>
 </html>

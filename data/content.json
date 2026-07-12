@@ -1,155 +1,240 @@
 {
   "site": {
-    "title": "Portfolio — Egah Qusay Fatanasyah",
-    "footer": "© 2026 Egah Qusay Fatanasyah"
+    "title": "Egah Qusay Fatanasyah — Robotics & AI Portfolio",
+    "shortTitle": "Egah Qusay Fatanasyah",
+    "footer": "© 2026 Egah Qusay Fatanasyah. Built for clarity, curiosity, and real-world impact."
   },
-
   "hero": {
-    "title": "Hi, I’m Egah",
-    "subtitle": "Robotics & Artificial Intelligence Student (8th Semester)/nAutonomous Systems • Computer Vision • Technical Leadership",
-    "tagline": "Building intelligent systems with real-world impact."
+    "eyebrow": "ROBOTICS · ARTIFICIAL INTELLIGENCE · SOFTWARE",
+    "title": "I build intelligent systems that move from idea to working product.",
+    "subtitle": "Robotics & Artificial Intelligence student at Universitas Airlangga, focused on local AI, computer vision, automation, and technical leadership.",
+    "tagline": "Open to AI engineering, software, robotics, research, and collaborative product work."
   },
-
   "about": {
-    "text": "I am a student at Universitas Airlangga, majoring in Robotics Engineering and Artificial Intelligence. As a student, I consistently take advantage of various opportunities to develop my potential. I actively participate in several student organizations, which have shaped me into an individual with strong management and leadership skills, as well as high adaptability to new environments. In addition, I also take part in various competitions to further enhance my technical and hard skills."
-  },
-
-  "navigation": [
-    { "label": "About", "href": "#about" },
-    { "label": "Journey", "href": "#journey" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Contact", "href": "#contact" }
-
-  ],
-
-  "journey": [
-  {
-    "id": "journey-2022-commander",
-    "year": "2022",
-    "title": "Level Commander of the 3rd cohort of Robotics & AI Engineering",
-    "image": "assets/img/journey/level-commander.jpg",
-    "short": "Served as Level Commander for the 3rd cohort of Robotics and Artificial Intelligence Engineering, leading and supporting the academic and non-academic processes of more than 90 students.",
-    "description": "Served as Level Commander for the 3rd cohort of Robotics and Artificial Intelligence Engineering, leading and supporting the academic and non-academic processes of more than 90 students."
-  },
-  {
-    "id": "journey-2023-intern",
-    "year": "2023",
-    "title": "Best Intern Staff – Ministry of Human Resource Development BEM FTMM 2023",
-    "image": "assets/img/journey/bem-2023.jpg",
-    "short": "Awarded Best Intern at the Ministry of Human Resource Development BEM FTMM, demonstrating strong work ethic, initiative, and organizational contribution.",
-    "description": "Awarded Best Intern at the Ministry of Human Resource Development BEM FTMM, demonstrating strong work ethic, initiative, and organizational contribution."
-  },
-  {
-    "id": "journey-2023-treasurer",
-    "year": "2023",
-    "title": "Treasurer Airlangga Robotics Community 2023",
-    "image": "assets/img/journey/roboticscom-2023.jpg",
-    "short": "Managed financial planning and accountability for the Airlangga University Robotics Community, supporting sustainable organizational operations.",
-    "description": "Managed financial planning and accountability for the Airlangga University Robotics Community, supporting sustainable organizational operations."
-  },
-  {
-    "id": "journey-2023-junior-programmer",
-    "year": "2023",
-    "title": "Junior Programmer Airlangga Abu Robocon Team 2023",
-    "image": "assets/img/journey/robocon-2023.jpg",
-    "short": "Contributed as a Junior Programmer in the Abu Robocon Team, focusing on software development, logic implementation, and robotics system integration.",
-    "description": "Contributed as a Junior Programmer in the Abu Robocon Team, focusing on software development, logic implementation, and robotics system integration."
-  },
-  {
-    "id": "journey-2023-social",
-    "year": "2023",
-    "title": "Staf of Social & Environmental Ministry 2023",
-    "image": "assets/img/journey/bem-2024.jpg",
-    "short": "Lead Organizer of a Student Blood Donation Program involving 50+ student donors, alongside community service activities at an inclusive children’s foundation and beach clean-up programs in Surabaya.",
-    "description": "Lead Organizer of a Student Blood Donation Program involving 50+ student donors, alongside community service activities at an inclusive children’s foundation and beach clean-up programs in Surabaya."
-  },
-  {
-    "id": "journey-2023-pimnas",
-    "year": "2023",
-    "title": "Silver Medalist – PIMNAS 36",
-    "image": "assets/img/journey/pimnas.jpg",
-    "short": "Awarded a Silver Medal in the Poster Category at the 36th PIMNAS under the Futuristic Written Idea Scheme (2023). Presented an innovative concept of a Sustainable Marine Maintenance System based on Artificial Intelligence (AI) and the Internet of Things (IoT), integrating principles of physics and modern technology.",
-    "description": "Awarded a Silver Medal in the Poster Category at the 36th PIMNAS under the Futuristic Written Idea Scheme (2023). Presented an innovative concept of a Sustainable Marine Maintenance System based on Artificial Intelligence (AI) and the Internet of Things (IoT), integrating principles of physics and modern technology."
-  },
-  {
-    "id": "journey-2024-robocon-head",
-    "year": "2024",
-    "title": "Team Leader Airlangga Abu Robocon 2024",
-    "image": "assets/img/journey/robocon-2024.jpg",
-    "short": "Led the Airlangga University Abu Robocon Team at the 2024 Indonesian Abu Robocon Contest, successfully advancing the team to the national stage and qualifying for the playoff round for the first time in its history.",
-    "description": "Led the Airlangga University Abu Robocon Team at the 2024 Indonesian Abu Robocon Contest, successfully advancing the team to the national stage and qualifying for the playoff round for the first time in its history."
-  },
-  {
-    "id": "journey-2024-community-head",
-    "year": "2024",
-    "title": "Head of Airlangga Robotics Community 2024",
-    "image": "assets/img/journey/roboticscom-2024.jpg",
-    "short": "Led more than 80 members, 5 managerial divisions, and 7 competition teams, successfully elevating the Airlangga Robotics Community to the Top 6 university rankings.",
-    "description": "Led more than 80 members, 5 managerial divisions, and 7 competition teams, successfully elevating the Airlangga Robotics Community to the Top 6 university rankings."
-  },
-  {
-    "id": "journey-2024-mbi-trainer",
-    "year": "2024",
-    "title": "MBI Robotics Trainer 2024",
-    "image": "assets/img/journey/mbi-trainer.jpg",
-    "short": "Provided hands-on robotics training, focusing on fundamental electronics, programming, and problem-solving skills",
-    "description": "Provided hands-on robotics training, focusing on fundamental electronics, programming, and problem-solving skills."
-  },
-  {
-    "id": "journey-2024-saim-trainer",
-    "year": "2024–2025",
-    "title": "Saim Robotics Trainer 2025",
-    "image": "assets/img/journey/saim-trainer.jpeg",
-    "short": "Mentored students in applied robotics projects, emphasizing logical thinking, teamwork, and practical engineering implementation.",
-    "description": "Mentored students in applied robotics projects, emphasizing logical thinking, teamwork, and practical engineering implementation."
-  },
-  {
-    "id": "journey-2025-minister",
-    "year": "2025",
-    "title": "Minister of Professional Development BEM UNAIR 2025",
-    "image": "assets/img/journey/bem-2025.jpeg",
-    "short": "Led professional development initiatives to enhance student skills, career readiness, and future-oriented competencies.",
-    "description": "Led professional development initiatives to enhance student skills, career readiness, and future-oriented competencies."
-  },
-  {
-  "id": "journey-2025-community",
-  "year": "2025",
-  "title": "Funded Community Empowerment Program – Ministry of Higher Education, Science, and Technology (2025)",
-  "image": "assets/img/journey/pm-bem.jpeg",
-  "short": "Initiated a community empowerment program focused on optimizing circular economy practices for dairy cattle farmers through technology-based waste processing innovations and social community empowerment in Bermi , Krucil . Played a crucial role as the core team responsible for handling and developing the technological aspects of the program.",
-  "description": "Initiated a community empowerment program focused on optimizing circular economy practices for dairy cattle farmers through technology-based waste processing innovations and social community empowerment in Bermi Village, Krucil District. Played a crucial role as the core team responsible for handling and developing the technological aspects of the program."
-  }
-    ],
-
-
-"projects": [
-  {
-    "title": "Linear Regression Analysis of Rice Production in Indonesia 2023",
-    "description": "Linear regression analysis to predict rice production based on harvested area using BPS data",
-    "image": "/assets/img/project/rice_production_regression/green_rice.jpg",
-    "link": "projects/rice_production_regression.html"
-  },
-  {
-  "title": "Housing Vulnerability in Indonesia Using Socioeconomic Infrastructure Data and Logistic Regression",
-  "description": "Logistic regression analysis of housing vulnerability using socioeconomic and infrastructure indicators in Indonesia",
-  "image": "/assets/img/project/housing_vulnerability/02_logistic_regression_coefficients.png",
-  "link": "projects/housing-vulnerability-in-indonesia-using-socioeconomic-infrastructure-data-and-logistic-regression.html"
-  },
-  {
-  "title": "Public Sentiment Analysis of YouTube Comments Toward Indonesia’s Vice President Gibran Rakabuming Raka Using XLM-RoBERTa",
-  "description": "A large-scale NLP study analyzing 80,000+ YouTube comments to measure public sentiment toward Indonesia’s Vice President Gibran Rakabuming Raka using a fine-tuned XLM-RoBERTa model and a custom web-based annotation tool.",
-  "image": "/assets/img/project/sentiment_gibran/gibran.png",
-  "link": "projects/sentiment-gibran-youtube.html"
-  }
-],
-
-
-  "contact": {
-    "text": "Interested in collaboration, research discussion, or professional opportunities?",
-    "links": [
-      { "label": "Email", "url": "mailto:egahqusayf.d@gmail.com" },
-      { "label": "GitHub", "url": "https://github.com/egahqusayf" },
-      { "label": "LinkedIn", "url": "https://linkedin.com/in/egahqusayf" }
+    "text": "I combine engineering, software, and leadership to turn technical ideas into systems that can be demonstrated, tested, and improved. My work spans artificial intelligence, robotics competitions, data science, and student-led initiatives. I value clear architecture, grounded evaluation, useful documentation, and solutions that work under real device constraints.",
+    "skills": [
+      "Python",
+      "Artificial Intelligence",
+      "Computer Vision",
+      "NLP",
+      "Information Retrieval",
+      "Robotics",
+      "Embedded Systems",
+      "Streamlit",
+      "Machine Learning",
+      "Technical Leadership"
     ]
-  }
+  },
+  "navigation": [
+    {
+      "label": "Work",
+      "href": "#work"
+    },
+    {
+      "label": "Journey",
+      "href": "#journey"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "journey": [
+    {
+      "id": "journey-2022-commander",
+      "year": "2022",
+      "title": "Level Commander of the 3rd cohort of Robotics & AI Engineering",
+      "image": "assets/img/journey/level-commander.jpg",
+      "short": "Served as Level Commander for the 3rd cohort of Robotics and Artificial Intelligence Engineering, leading and supporting the academic and non-academic processes of more than 90 students.",
+      "description": "Served as Level Commander for the 3rd cohort of Robotics and Artificial Intelligence Engineering, leading and supporting the academic and non-academic processes of more than 90 students."
+    },
+    {
+      "id": "journey-2023-intern",
+      "year": "2023",
+      "title": "Best Intern Staff – Ministry of Human Resource Development BEM FTMM 2023",
+      "image": "assets/img/journey/bem-2023.jpg",
+      "short": "Awarded Best Intern at the Ministry of Human Resource Development BEM FTMM, demonstrating strong work ethic, initiative, and organizational contribution.",
+      "description": "Awarded Best Intern at the Ministry of Human Resource Development BEM FTMM, demonstrating strong work ethic, initiative, and organizational contribution."
+    },
+    {
+      "id": "journey-2023-treasurer",
+      "year": "2023",
+      "title": "Treasurer Airlangga Robotics Community 2023",
+      "image": "assets/img/journey/roboticscom-2023.jpg",
+      "short": "Managed financial planning and accountability for the Airlangga University Robotics Community, supporting sustainable organizational operations.",
+      "description": "Managed financial planning and accountability for the Airlangga University Robotics Community, supporting sustainable organizational operations."
+    },
+    {
+      "id": "journey-2023-junior-programmer",
+      "year": "2023",
+      "title": "Junior Programmer Airlangga Abu Robocon Team 2023",
+      "image": "assets/img/journey/robocon-2023.jpg",
+      "short": "Contributed as a Junior Programmer in the Abu Robocon Team, focusing on software development, logic implementation, and robotics system integration.",
+      "description": "Contributed as a Junior Programmer in the Abu Robocon Team, focusing on software development, logic implementation, and robotics system integration."
+    },
+    {
+      "id": "journey-2023-social",
+      "year": "2023",
+      "title": "Staf of Social & Environmental Ministry 2023",
+      "image": "assets/img/journey/bem-2024.jpg",
+      "short": "Lead Organizer of a Student Blood Donation Program involving 50+ student donors, alongside community service activities at an inclusive children’s foundation and beach clean-up programs in Surabaya.",
+      "description": "Lead Organizer of a Student Blood Donation Program involving 50+ student donors, alongside community service activities at an inclusive children’s foundation and beach clean-up programs in Surabaya."
+    },
+    {
+      "id": "journey-2023-pimnas",
+      "year": "2023",
+      "title": "Silver Medalist – PIMNAS 36",
+      "image": "assets/img/journey/pimnas.jpg",
+      "short": "Awarded a Silver Medal in the Poster Category at the 36th PIMNAS under the Futuristic Written Idea Scheme (2023). Presented an innovative concept of a Sustainable Marine Maintenance System based on Artificial Intelligence (AI) and the Internet of Things (IoT), integrating principles of physics and modern technology.",
+      "description": "Awarded a Silver Medal in the Poster Category at the 36th PIMNAS under the Futuristic Written Idea Scheme (2023). Presented an innovative concept of a Sustainable Marine Maintenance System based on Artificial Intelligence (AI) and the Internet of Things (IoT), integrating principles of physics and modern technology."
+    },
+    {
+      "id": "journey-2024-robocon-head",
+      "year": "2024",
+      "title": "Team Leader Airlangga Abu Robocon 2024",
+      "image": "assets/img/journey/robocon-2024.jpg",
+      "short": "Led the Airlangga University Abu Robocon Team at the 2024 Indonesian Abu Robocon Contest, successfully advancing the team to the national stage and qualifying for the playoff round for the first time in its history.",
+      "description": "Led the Airlangga University Abu Robocon Team at the 2024 Indonesian Abu Robocon Contest, successfully advancing the team to the national stage and qualifying for the playoff round for the first time in its history."
+    },
+    {
+      "id": "journey-2024-community-head",
+      "year": "2024",
+      "title": "Head of Airlangga Robotics Community 2024",
+      "image": "assets/img/journey/roboticscom-2024.jpg",
+      "short": "Led more than 80 members, 5 managerial divisions, and 7 competition teams, successfully elevating the Airlangga Robotics Community to the Top 6 university rankings.",
+      "description": "Led more than 80 members, 5 managerial divisions, and 7 competition teams, successfully elevating the Airlangga Robotics Community to the Top 6 university rankings."
+    },
+    {
+      "id": "journey-2024-mbi-trainer",
+      "year": "2024",
+      "title": "MBI Robotics Trainer 2024",
+      "image": "assets/img/journey/mbi-trainer.jpg",
+      "short": "Provided hands-on robotics training, focusing on fundamental electronics, programming, and problem-solving skills",
+      "description": "Provided hands-on robotics training, focusing on fundamental electronics, programming, and problem-solving skills."
+    },
+    {
+      "id": "journey-2024-saim-trainer",
+      "year": "2024–2025",
+      "title": "Saim Robotics Trainer 2025",
+      "image": "assets/img/journey/saim-trainer.jpeg",
+      "short": "Mentored students in applied robotics projects, emphasizing logical thinking, teamwork, and practical engineering implementation.",
+      "description": "Mentored students in applied robotics projects, emphasizing logical thinking, teamwork, and practical engineering implementation."
+    },
+    {
+      "id": "journey-2025-minister",
+      "year": "2025",
+      "title": "Minister of Professional Development BEM UNAIR 2025",
+      "image": "assets/img/journey/bem-2025.jpeg",
+      "short": "Led professional development initiatives to enhance student skills, career readiness, and future-oriented competencies.",
+      "description": "Led professional development initiatives to enhance student skills, career readiness, and future-oriented competencies."
+    },
+    {
+      "id": "journey-2025-community",
+      "year": "2025",
+      "title": "Funded Community Empowerment Program – Ministry of Higher Education, Science, and Technology (2025)",
+      "image": "assets/img/journey/pm-bem.jpeg",
+      "short": "Initiated a community empowerment program focused on optimizing circular economy practices for dairy cattle farmers through technology-based waste processing innovations and social community empowerment in Bermi , Krucil . Played a crucial role as the core team responsible for handling and developing the technological aspects of the program.",
+      "description": "Initiated a community empowerment program focused on optimizing circular economy practices for dairy cattle farmers through technology-based waste processing innovations and social community empowerment in Bermi Village, Krucil District. Played a crucial role as the core team responsible for handling and developing the technological aspects of the program."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Local AI Document Intelligence",
+      "kicker": "FEATURED · LOCAL AI / RAG",
+      "description": "A local-first multi-PDF question answering application with semantic retrieval, TF-IDF fallback, page-level citations, extractive answers, and optional Ollama generation.",
+      "image": "assets/img/project/local_ai_document_intelligence/ui_answer_mockup.png",
+      "link": "projects/local-ai-document-intelligence.html",
+      "category": "AI / NLP",
+      "year": "2026",
+      "tags": [
+        "Python",
+        "Streamlit",
+        "RAG",
+        "Ollama",
+        "PyMuPDF"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Linear Regression Analysis of Rice Production in Indonesia 2023",
+      "description": "Linear regression analysis to predict rice production based on harvested area using BPS data",
+      "image": "assets/img/project/rice_production_regression/green_rice.jpg",
+      "link": "projects/rice_production_regression.html",
+      "category": "Data Science",
+      "year": "2026",
+      "tags": [
+        "Python",
+        "Regression",
+        "BPS Data"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Housing Vulnerability in Indonesia Using Socioeconomic Infrastructure Data and Logistic Regression",
+      "description": "Logistic regression analysis of housing vulnerability using socioeconomic and infrastructure indicators in Indonesia",
+      "image": "assets/img/project/housing_vulnerability/02_logistic_regression_coefficients.png",
+      "link": "projects/housing-vulnerability-in-indonesia-using-socioeconomic-infrastructure-data-and-logistic-regression.html",
+      "category": "Data Science",
+      "year": "2026",
+      "tags": [
+        "Python",
+        "Classification",
+        "Scikit-learn"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Public Sentiment Analysis of YouTube Comments Toward Indonesia’s Vice President Gibran Rakabuming Raka Using XLM-RoBERTa",
+      "description": "A large-scale NLP study analyzing 80,000+ YouTube comments to measure public sentiment toward Indonesia’s Vice President Gibran Rakabuming Raka using a fine-tuned XLM-RoBERTa model and a custom web-based annotation tool.",
+      "image": "assets/img/project/sentiment_gibran/gibran.png",
+      "link": "projects/sentiment-gibran-youtube.html",
+      "category": "AI / NLP",
+      "year": "2026",
+      "tags": [
+        "XLM-RoBERTa",
+        "NLP",
+        "Flask"
+      ],
+      "featured": false
+    }
+  ],
+  "contact": {
+    "text": "Let’s discuss AI, robotics, software engineering, research, or a project that needs to move from concept to implementation.",
+    "links": [
+      {
+        "label": "Email",
+        "url": "mailto:egahqusayf.d@gmail.com"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/egahqusayf"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/egahqusayf"
+      },
+      {
+        "label": "Instagram Projects",
+        "url": "https://instagram.com/egah.projects"
+      }
+    ]
+  },
+  "stats": [
+    {
+      "value": "2024",
+      "label": "Head of Airlangga University Robotics Community"
+    },
+    {
+      "value": "6 Teams",
+      "label": "Qualified for National Competitions"
+    },
+    {
+      "value": "Top 6",
+      "label": "University Ranking at the Indonesian Robot Contest"
+    }
+  ]
 }
