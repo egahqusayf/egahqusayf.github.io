@@ -85,17 +85,21 @@ function renderProjects() {
     : projects.filter(project => project.category === state.projectFilter);
   state.projectIndex = 0;
 
-  $('#project-list').innerHTML = state.filteredProjects.map(project => `
-    <a class="project-card ${project.featured ? 'featured' : ''}" href="${project.link}" aria-label="Open case study: ${project.title}">
-      <div class="project-image"><img src="${project.image}" alt="${project.title}" loading="lazy"></div>
-      <div class="project-body">
-        <span class="project-kicker">${project.kicker || `${project.category} · ${project.year}`}</span>
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-        <div class="project-tags">${(project.tags || []).map(tag => `<span>${tag}</span>`).join('')}</div>
-      </div>
-      <span class="project-arrow" aria-hidden="true">↗</span>
-    </a>`).join('');
+  $('#project-list').innerHTML = state.filteredProjects.map((project, index) => `
+    <article class="project-card ${project.featured ? 'featured' : ''} tilt-card" data-tilt>
+      <a class="project-card-link" href="${project.link}" aria-label="Open case study: ${project.title}">
+        <div class="project-image"><img src="${project.image}" alt="${project.title}" loading="lazy"></div>
+        <div class="project-body">
+          <span class="project-kicker">${project.kicker || `${project.category} · ${project.year}`}</span>
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          <div class="project-tags">${(project.tags || []).map(tag => `<span>${tag}</span>`).join('')}</div>
+        </div>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+      </a>
+      <button class="project-preview-button" data-preview-index="${index}" aria-label="Quick preview: ${project.title}">Quick view <span>＋</span></button>
+      <span class="project-number">${String(index + 1).padStart(2, '0')}</span>
+    </article>`).join('');
 
   $$('.filter-button').forEach(button => {
     button.addEventListener('click', () => {
@@ -105,6 +109,10 @@ function renderProjects() {
     });
   });
 
+  $$('.project-preview-button').forEach(button => button.addEventListener('click', () => {
+    openProjectPreview(state.filteredProjects[Number(button.dataset.previewIndex)]);
+  }));
+  initTiltCards();
   requestAnimationFrame(updateProjectControls);
 }
 
@@ -312,6 +320,99 @@ addEventListener('keydown', event => {
   }
 });
 
+
+const focusItems = ['grounded AI systems', 'defensive machine learning', 'robotics under real constraints', 'software that documents itself'];
+let focusIndex = 0;
+function rotateFocus() {
+  const element = $('#rotating-focus');
+  if (!element || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  element.classList.add('is-changing');
+  setTimeout(() => {
+    focusIndex = (focusIndex + 1) % focusItems.length;
+    element.textContent = focusItems[focusIndex];
+    element.classList.remove('is-changing');
+  }, 180);
+}
+setInterval(rotateFocus, 2800);
+
+function animateStats() {
+  $$('.stat strong').forEach(element => {
+    if (element.dataset.animated) return;
+    const original = element.textContent.trim();
+    const match = original.match(/\d+/);
+    if (!match) return;
+    element.dataset.animated = 'true';
+    const target = Number(match[0]);
+    const prefix = original.slice(0, match.index);
+    const suffix = original.slice(match.index + match[0].length);
+    const start = performance.now();
+    const duration = 900;
+    const frame = now => {
+      const progress = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      element.textContent = `${prefix}${Math.round(target * eased)}${suffix}`;
+      if (progress < 1) requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  });
+}
+
+function initTiltCards() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || matchMedia('(pointer: coarse)').matches) return;
+  $$('[data-tilt]').forEach(card => {
+    if (card.dataset.tiltReady) return;
+    card.dataset.tiltReady = 'true';
+    card.addEventListener('pointermove', event => {
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - .5;
+      const y = (event.clientY - rect.top) / rect.height - .5;
+      card.style.setProperty('--tilt-x', `${(-y * 3.2).toFixed(2)}deg`);
+      card.style.setProperty('--tilt-y', `${(x * 4.2).toFixed(2)}deg`);
+      card.style.setProperty('--glow-x', `${((x + .5) * 100).toFixed(1)}%`);
+      card.style.setProperty('--glow-y', `${((y + .5) * 100).toFixed(1)}%`);
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.setProperty('--tilt-x', '0deg');
+      card.style.setProperty('--tilt-y', '0deg');
+    });
+  });
+}
+
+function openProjectPreview(project) {
+  if (!project) return;
+  const preview = $('#project-preview');
+  $('#preview-image').src = project.image;
+  $('#preview-image').alt = project.title;
+  $('#preview-kicker').textContent = project.kicker || `${project.category} · ${project.year}`;
+  $('#preview-title').textContent = project.title;
+  $('#preview-description').textContent = project.description;
+  $('#preview-tags').innerHTML = (project.tags || []).map(tag => `<span>${tag}</span>`).join('');
+  $('#preview-metrics').innerHTML = (project.metrics || []).map(metric => `<span>${metric}</span>`).join('');
+  $('#preview-link').href = project.link;
+  preview.classList.add('open');
+  preview.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  setTimeout(() => $('#project-preview-close').focus(), 30);
+}
+function closeProjectPreview() {
+  const preview = $('#project-preview');
+  preview.classList.remove('open');
+  preview.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+}
+$('#project-preview-close')?.addEventListener('click', closeProjectPreview);
+$('#project-preview-backdrop')?.addEventListener('click', closeProjectPreview);
+addEventListener('keydown', event => {
+  if (event.key === 'Escape' && $('#project-preview')?.classList.contains('open')) closeProjectPreview();
+});
+
+const cursorAura = $('#cursor-aura');
+if (cursorAura && !matchMedia('(pointer: coarse)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  addEventListener('pointermove', event => {
+    cursorAura.style.transform = `translate3d(${event.clientX - 190}px, ${event.clientY - 190}px, 0)`;
+  }, { passive: true });
+}
+
 fetch('data/content.json')
   .then(response => {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -328,6 +429,7 @@ fetch('data/content.json')
     $('#about-text').textContent = data.about.text;
     $('#skill-cloud').innerHTML = data.about.skills.map(skill => `<span>${skill}</span>`).join('');
     $('#stats').innerHTML = data.stats.map(stat => `<div class="stat reveal"><strong>${stat.value}</strong><span>${stat.label}</span></div>`).join('');
+    requestAnimationFrame(animateStats);
     const ticker = [...data.about.skills, ...data.about.skills];
     $('#skill-ticker').innerHTML = ticker.map(skill => `<span class="ticker-item">${skill}</span>`).join('');
     renderProjects();
@@ -335,6 +437,7 @@ fetch('data/content.json')
     renderContact();
     $('#footer-text').textContent = data.site.footer;
     initReveal();
+    initTiltCards();
     restartProjectAutoplay();
     restartJourneyAutoplay();
   })

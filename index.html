@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+  <div class="cursor-aura" id="cursor-aura" aria-hidden="true"></div>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
 
@@ -41,6 +42,7 @@
             <a class="button button-ghost" href="mailto:egahqusayf.d@gmail.com">Start a conversation</a>
           </div>
           <p class="availability" id="hero-tagline"><span></span></p>
+          <div class="hero-signals" aria-live="polite"><span>Currently exploring</span><strong id="rotating-focus">grounded AI systems</strong></div>
         </div>
         <div class="hero-visual reveal">
           <div class="portrait-frame">
@@ -81,15 +83,30 @@
       </div>
     </section>
 
-    <section class="process section-pad">
+    <section class="process section-pad" id="process">
       <div class="shell">
         <div class="section-heading reveal">
           <div><p class="eyebrow">HOW I WORK</p><h2>Engineering with a visible chain of reasoning.</h2></div>
+          <p>Every stage leaves an artifact: a problem definition, an architecture, a tested result, and documentation that another person can reproduce.</p>
         </div>
         <div class="process-grid">
-          <article class="process-card reveal"><span>01</span><h3>Frame the problem</h3><p>Translate a broad idea into constraints, measurable behavior, users, and acceptance criteria.</p></article>
-          <article class="process-card reveal"><span>02</span><h3>Build the system</h3><p>Separate responsibilities, design fallbacks, and choose technology based on the deployment environment.</p></article>
-          <article class="process-card reveal"><span>03</span><h3>Validate & document</h3><p>Test the critical path, show evidence, record limitations, and make the work easy to reproduce.</p></article>
+          <article class="process-card reveal tilt-card" data-tilt>
+            <figure class="process-media"><img src="assets/img/process/01-frame-the-problem.jpg" alt="Architecture diagram used while framing an engineering problem" loading="lazy"></figure>
+            <div class="process-content"><span>01 · DISCOVERY</span><h3>Frame the problem</h3><p>Translate a broad idea into users, constraints, measurable behavior, risks, and acceptance criteria before choosing technology.</p></div>
+          </article>
+          <article class="process-card reveal tilt-card" data-tilt>
+            <figure class="process-media"><img src="assets/img/process/02-build-the-system.jpg" alt="Botnet Traffic Detection dashboard representing system implementation" loading="lazy"></figure>
+            <div class="process-content"><span>02 · ENGINEERING</span><h3>Build the system</h3><p>Separate responsibilities, design fallback paths, and select tools according to the device, data, and deployment environment.</p></div>
+          </article>
+          <article class="process-card reveal tilt-card" data-tilt>
+            <figure class="process-media"><img src="assets/img/process/03-validate-document.jpg" alt="Evaluation metrics and confusion matrix representing validation" loading="lazy"></figure>
+            <div class="process-content"><span>03 · VALIDATION</span><h3>Validate & document</h3><p>Test the critical path, expose evidence, explain limitations, and package the work so it is easy to reproduce and review.</p></div>
+          </article>
+        </div>
+        <div class="proof-rail reveal" aria-label="Engineering principles">
+          <span><strong>01</strong> Evidence before claims</span>
+          <span><strong>02</strong> Fallbacks before failure</span>
+          <span><strong>03</strong> Documentation before handoff</span>
         </div>
       </div>
     </section>
@@ -132,6 +149,23 @@
   <footer class="site-footer shell"><p id="footer-text"></p><a href="#top">Back to top ↑</a></footer>
   <button class="floating-top" id="floating-top" aria-label="Back to top">↑</button>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+  <div class="project-preview" id="project-preview" aria-hidden="true">
+    <button class="project-preview-backdrop" id="project-preview-backdrop" aria-label="Close project preview"></button>
+    <article class="project-preview-dialog" role="dialog" aria-modal="true" aria-labelledby="preview-title">
+      <button class="project-preview-close" id="project-preview-close" aria-label="Close project preview">×</button>
+      <div class="project-preview-media"><img id="preview-image" alt=""></div>
+      <div class="project-preview-copy">
+        <p class="project-preview-kicker" id="preview-kicker"></p>
+        <h2 id="preview-title"></h2>
+        <p id="preview-description"></p>
+        <div class="project-preview-metrics" id="preview-metrics"></div>
+        <div class="project-preview-tags" id="preview-tags"></div>
+        <a class="button button-primary" id="preview-link" href="#">Open full case study <span>↗</span></a>
+      </div>
+    </article>
+  </div>
 
   <div class="command-palette" id="command-palette" aria-hidden="true">
     <button class="command-backdrop" id="command-backdrop" aria-label="Close quick navigation"></button>

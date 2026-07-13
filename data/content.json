@@ -31,6 +31,10 @@
       "href": "#work"
     },
     {
+      "label": "Process",
+      "href": "#process"
+    },
+    {
       "label": "Journey",
       "href": "#journey"
     },
@@ -157,7 +161,32 @@
         "Ollama",
         "PyMuPDF"
       ],
-      "featured": true
+      "featured": true,
+      "metrics": [
+        "Page-level citations",
+        "2 retrieval paths",
+        "Local-first"
+      ]
+    },
+    {
+      "title": "Botnet Traffic Detection",
+      "description": "A defensive machine-learning application that classifies network-flow records as Normal or Botnet using real CTU-13-derived data, transparent evaluation, risk scoring, and analyst-ready exports.",
+      "image": "assets/img/project/botnet_traffic_detection/botnet-traffic-detection.png",
+      "link": "projects/botnet-traffic-detection.html",
+      "category": "AI / Cybersecurity",
+      "year": "2026",
+      "tags": [
+        "Scikit-learn",
+        "Cybersecurity",
+        "Streamlit"
+      ],
+      "featured": true,
+      "kicker": "NEW · DEFENSIVE AI / CYBERSECURITY",
+      "metrics": [
+        "99.55% accuracy",
+        "16K holdout flows",
+        "29 features"
+      ]
     },
     {
       "title": "Linear Regression Analysis of Rice Production in Indonesia 2023",
@@ -171,7 +200,12 @@
         "Regression",
         "BPS Data"
       ],
-      "featured": false
+      "featured": false,
+      "metrics": [
+        "BPS data",
+        "Regression workflow",
+        "Visual diagnostics"
+      ]
     },
     {
       "title": "Housing Vulnerability in Indonesia Using Socioeconomic Infrastructure Data and Logistic Regression",
@@ -185,7 +219,12 @@
         "Classification",
         "Scikit-learn"
       ],
-      "featured": false
+      "featured": false,
+      "metrics": [
+        "Logistic regression",
+        "Socioeconomic data",
+        "Explainable coefficients"
+      ]
     },
     {
       "title": "Public Sentiment Analysis of YouTube Comments Toward Indonesia’s Vice President Gibran Rakabuming Raka Using XLM-RoBERTa",
@@ -199,7 +238,12 @@
         "NLP",
         "Flask"
       ],
-      "featured": false
+      "featured": false,
+      "metrics": [
+        "80K+ comments",
+        "XLM-RoBERTa",
+        "Custom annotation tool"
+      ]
     }
   ],
   "contact": {

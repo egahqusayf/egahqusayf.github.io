@@ -59,3 +59,11 @@ projects/
 ## Local AI Document Intelligence
 
 The featured Local AI project uses the grounded-answer interface as its main visual. Its case study contains the project description, architecture, indexing workflow, retrieval modes, answer engine, testing, limitations, roadmap, and GitHub repository link. No project button opens a PDF.
+
+
+## Portfolio V3 updates
+
+- Added the complete **Botnet Traffic Detection** case study and visual assets.
+- Replaced template-like process boxes with image-led, real-project documentation.
+- Added project quick previews, animated metrics, rotating focus text, pointer spotlight, tilt interactions, and evidence-first process principles.
+- Preserved keyboard navigation, reduced-motion support, responsive layouts, filters, autoplay controls, command palette, and GitHub Pages compatibility.
